@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://davidwhitaker.netlify.app/sitemap.xml

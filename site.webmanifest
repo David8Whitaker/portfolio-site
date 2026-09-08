@@ -1,0 +1,16 @@
+{
+  "name": "David Whitaker \u2014 Full-Stack Developer, Bangkok",
+  "short_name": "David Whitaker",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#070a14",
+  "theme_color": "#070a14",
+  "icons": [
+    {
+      "src": "/assets/thaigether/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
