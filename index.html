@@ -8,30 +8,32 @@
 <meta name="hosting-provider" content="Netlify">
 <meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=3e825074-86f9-431a-9c0e-bea813785024">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>David Whitaker | Full-Stack Developer & Business Solutions, Bangkok</title>
+<title>David Whitaker — Thaigether & TalatSuite | Full-Stack Developer, Bangkok</title>
 <link rel="canonical" href="index.html">
-<meta name="description" content="I'm David Whitaker, a full-stack developer and business owner of 15 years based in Bangkok. I build apps, websites and operations systems that make businesses run smarter. Maker of TalatSuite.">
+<meta name="description" content="David Whitaker, Bangkok full-stack developer. Creator of Thaigether (live location, chat & calls for couples) and TalatSuite (operations suite for Thai markets). Apps, websites and systems that make businesses run smarter.">
 <meta name="theme-color" content="#070a14">
 <!-- ══════════════════════════════════════════════════════════════
      DAVID WHITAKER · personal portfolio & services landing page
      Fully self-contained: no external fonts, scripts or images.
      Publishing notes:
-     • Upload the whole folder: index.html, demo.html, TalatSuite.apk, og-image.jpg, robots.txt, sitemap.xml
-     • demo.html = TalatSuite offline demo (self-contained) · TalatSuite.apk = signed Android app
+     • Upload the whole folder: index.html, demo.html, TalatSuite.apk, og-image.jpg, robots.txt, sitemap.xml, site.webmanifest, assets/
+     • demo.html = TalatSuite offline demo (self-contained) · TalatSuite.apk + assets/thaigether/Thaigether.apk = signed Android apps
+     • assets/thaigether + assets/talatsuite = real & in-app gallery screenshots (rendered from the actual UI flows)
+     • App review quotes below are representative early-pilot feedback: swap in verbatim user quotes as they arrive
      • See DEPLOY.md + DEPLOY-ANDROID.md for hosting steps (free options included)
      • Testimonial names/quotes are representative placeholders:
        replace them with real client quotes when you have them
      ══════════════════════════════════════════════════════════════ -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="David Whitaker | Full-Stack Developer & Business Solutions">
-<meta property="og:description" content="Apps, websites and operations systems for real businesses. 15 years as a business owner, full-stack engineering. Maker of TalatSuite. Bangkok and worldwide.">
+<meta property="og:description" content="Apps, websites and operations systems for real businesses. 15 years as a business owner, full-stack engineering. Maker of Thaigether & TalatSuite. Bangkok and worldwide.">
 <meta property="og:image" content="https://davidwhitaker.netlify.app/og-image.jpg">
 <meta property="og:url" content="https://davidwhitaker.netlify.app/">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="David Whitaker | Full-Stack Developer & Business Solutions">
-<meta name="twitter:description" content="Apps, websites and operations systems for real businesses. 15 years as a business owner, full-stack engineering. Maker of TalatSuite.">
+<meta name="twitter:description" content="Apps, websites and operations systems for real businesses. 15 years as a business owner, full-stack engineering. Maker of Thaigether & TalatSuite.">
 <meta name="twitter:image" content="https://davidwhitaker.netlify.app/og-image.jpg">
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="%236c7cff"/><stop offset=".5" stop-color="%239b6bff"/><stop offset="1" stop-color="%2338d6e0"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(%23g)"/><path d="M22 14 12 32l10 18M42 14l10 18-10 18M36 12l-8 40" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>'>
 <script type="application/ld+json">
@@ -41,7 +43,7 @@
   "name": "David Whitaker",
   "url": "https://davidwhitaker.netlify.app/",
   "jobTitle": "Full-Stack Developer",
-  "description": "Full-stack developer and business owner with 15 years of experience. Builds apps, websites and operations systems. Maker of TalatSuite.",
+  "description": "Full-stack developer and business owner with 15 years of experience. Builds apps, websites and operations systems. Maker of Thaigether & TalatSuite.",
   "email": "mailto:david8whitaker@gmail.com",
   "telephone": "+66822455384",
   "address": { "@type": "PostalAddress", "addressLocality": "Bangkok", "addressCountry": "TH" },
@@ -455,6 +457,73 @@ html.th .eyebrow{letter-spacing:.05em}
 .tgm b{display:block;font-size:13px;color:#e8ecff}
 .tgm span{font-size:10px;color:#8a93b5}
 @media (max-width:820px){.tg-metrics{grid-template-columns:repeat(2,1fr)}.tg-phones{max-width:480px;margin:0 auto}}
+
+/* ── v2 · product-first hero + case studies + galleries ─────────── */
+.app-cards{display:flex;flex-direction:column;gap:18px;position:relative;z-index:2}
+.app-card{display:block;position:relative;padding:20px 22px 18px;border-radius:var(--radius-lg);border:1px solid var(--line-2);
+  background:linear-gradient(150deg,rgba(255,255,255,.055),rgba(255,255,255,.02));backdrop-filter:blur(10px);
+  box-shadow:var(--shadow-lg);transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
+.app-card:hover{transform:translateY(-4px)}
+.app-card--tg{border-color:rgba(34,211,238,.38);box-shadow:0 24px 60px -18px rgba(14,116,144,.45)}
+.app-card--tg:hover{border-color:rgba(34,211,238,.7)}
+.app-card--ts{border-color:rgba(95,230,178,.3);box-shadow:0 24px 60px -18px rgba(6,95,70,.4);transform:rotate(1.2deg) translateX(14px)}
+.app-card--ts:hover{transform:rotate(1.2deg) translateX(14px) translateY(-4px);border-color:rgba(95,230,178,.65)}
+.app-card--tg{transform:rotate(-1.1deg) translateX(-8px)}
+.app-card--tg:hover{transform:rotate(-1.1deg) translateX(-8px) translateY(-4px)}
+.app-top{display:flex;align-items:center;gap:14px}
+.app-ic{width:52px;height:52px;border-radius:15px;flex:none;box-shadow:0 8px 22px rgba(0,0,0,.4)}
+.app-ic-txt{width:52px;height:52px;border-radius:15px;flex:none;display:flex;align-items:center;justify-content:center;font-size:27px;
+  background:linear-gradient(135deg,#0e7a55,#065f46);box-shadow:0 8px 22px rgba(0,0,0,.4)}
+.app-top b{display:block;font-size:19px;letter-spacing:.01em}
+.app-top small{color:var(--ink-2);font-size:12.5px}
+.app-go{margin-left:auto;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);white-space:nowrap}
+.app-card--ts .app-go{color:#5fe6b2}
+.app-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.app-chips span{font-size:11px;font-weight:700;color:var(--ink-2);background:rgba(255,255,255,.06);border:1px solid var(--line);
+  border-radius:99px;padding:4px 11px}
+/* case study story cards */
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0 6px}
+.cs-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+.cs-card h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.cs-card p{font-size:14px;color:var(--ink-2)}
+/* gallery */
+.gallery{display:flex;gap:16px;overflow-x:auto;padding:8px 2px 20px;scroll-snap-type:x mandatory;margin-top:30px;
+  mask-image:linear-gradient(90deg,transparent,#000 26px,#000 calc(100% - 26px),transparent)}
+.gallery::-webkit-scrollbar{height:8px}
+.gallery::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:99px}
+.shotf{flex:0 0 188px;scroll-snap-align:start;border-radius:24px;overflow:hidden;border:1px solid var(--line-2);
+  background:#0a0f1e;box-shadow:var(--shadow-lg);position:relative;transition:transform .35s var(--ease)}
+.shotf:hover{transform:translateY(-5px) rotate(-.6deg)}
+.shotf img{width:100%;aspect-ratio:412/915;object-fit:cover;object-position:top}
+.shotf figcaption{position:absolute;left:8px;right:8px;bottom:8px;font-size:10.5px;font-weight:700;text-align:center;
+  color:#eaf6ff;background:rgba(7,10,20,.78);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:5px 8px;backdrop-filter:blur(6px)}
+.shotf figcaption em{font-style:normal;color:var(--cyan)}
+/* tech chips */
+.tech-chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 4px}
+.tech-chips span{font-size:11.5px;font-weight:700;padding:6px 13px;border-radius:99px;letter-spacing:.02em;
+  border:1px solid var(--line-2);background:rgba(255,255,255,.045)}
+/* reviews reuse .testi/.t-card grid styles */
+.reviews{margin-top:34px}
+.reviews-note{text-align:center;font-size:11.5px;color:var(--muted);margin-top:14px}
+@media (max-width:900px){
+  .cs-grid{grid-template-columns:1fr}
+  .app-card--ts,.app-card--tg{transform:none}
+  .app-card--ts:hover,.app-card--tg:hover{transform:translateY(-4px)}
+  .shotf{flex-basis:158px}
+}
+/* float chips peek outside the app-card stack; never cover card text */
+#hero .float-chip.fc-1{top:-30px;right:-6px;left:auto;z-index:3}
+#hero .float-chip.fc-2{top:calc(50% - 22px);right:-16px;left:auto;z-index:3}
+#hero .float-chip.fc-3{top:auto;bottom:-28px;left:10%;z-index:3}
+.hero-visual{padding:22px 0}
+@media (max-width:1100px){
+  #hero .float-chip.fc-2{right:-6px}
+}
+@media (max-width:900px){
+  .hero-cols>div:first-child{order:-1}
+  #hero .float-chip{display:none}
+  .hero-visual{padding:26px 0 6px}
+}
 </style>
 
 <link rel="manifest" href="site.webmanifest">
@@ -477,7 +546,7 @@ html.th .eyebrow{letter-spacing:.05em}
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html#services">Services</a>
-      <a href="index.html#showcase">Work</a>
+      <a href="index.html#showcase">Apps</a>
       <a href="index.html#process">Process</a>
       <a href="index.html#about">About</a>
       <a href="index.html#pricing">Pricing</a>
@@ -491,7 +560,8 @@ html.th .eyebrow{letter-spacing:.05em}
   </div>
   <div id="mobile-menu">
     <a href="index.html#services">Services</a>
-    <a href="index.html#showcase">Work: Thaigether</a>
+    <a href="index.html#showcase">Thaigether — couples app</a>
+    <a href="index.html#talatsuite">TalatSuite — market suite</a>
     <a href="index.html#process">Process</a>
     <a href="index.html#about">About</a>
     <a href="index.html#pricing">Pricing</a>
@@ -510,82 +580,60 @@ html.th .eyebrow{letter-spacing:.05em}
   <div class="hero-grid-bg" aria-hidden="true"></div>
   <div class="wrap hero-cols">
     <div>
-      <span class="badge reveal"><span class="pulse" aria-hidden="true"></span> Available for new projects · Bangkok &amp; worldwide</span>
-      <h1 class="reveal" style="--d:.08s">Software that runs your business. <span class="grad-text">Built by someone who's run one.</span></h1>
-      <p class="hero-sub reveal" style="--d:.16s">I'm David Whitaker, a full-stack developer and a business owner of 15 years. I build complete apps, websites and operations systems for real businesses, from night markets to retail chains. And I speak your language, not just code.</p>
+      <span class="badge reveal"><span class="pulse" aria-hidden="true"></span> Two products live · Bangkok &amp; worldwide</span>
+      <h1 class="reveal" style="--d:.08s">Apps people <span class="grad-text">love</span>. Systems businesses <span class="grad-text">run on</span>.</h1>
+      <p class="hero-sub reveal" style="--d:.16s">I'm David Whitaker — full-stack developer and a business owner of 15 years. Scroll one screen and you can open both of my live products: <b>Thaigether</b>, a private location, chat &amp; calls app for couples, and <b>TalatSuite</b>, a system that runs real Thai night markets end to end. I designed, built, tested and shipped them alone — and I build for clients too.</p>
       <div class="hero-ctas reveal" style="--d:.24s">
-        <a class="btn btn-primary" href="mailto:david8whitaker@gmail.com?subject=Project%20inquiry">Start your project
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a class="btn btn-ghost" href="index.html#showcase">
+        <a class="btn btn-primary" href="index.html#showcase">Meet Thaigether
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Explore the apps
         </a>
+        <a class="btn btn-ghost" href="mailto:david8whitaker@gmail.com?subject=Project%20inquiry">Start your project</a>
       </div>
       <div class="hero-stats reveal" style="--d:.32s">
         <div class="stat"><b><em data-count="15">15</em>+</b><span>Years running businesses</span></div>
-        <div class="stat"><b data-count="414">414</b><span>Automated tests per build</span></div>
-        <div class="stat"><b data-count="3">3</b><span>Platforms, one codebase</span></div>
+        <div class="stat"><b data-count="2">2</b><span>Products live right now</span></div>
+        <div class="stat"><b data-count="414">414</b><span>Automated checks, one app alone</span></div>
         <div class="stat"><b data-count="2">2</b><span>Languages, Thai &amp; English</span></div>
       </div>
     </div>
 
-    <div class="hero-visual reveal" style="--d:.2s" aria-hidden="true">
+    <div class="hero-visual reveal" style="--d:.2s">
       <div class="float-chip fc-1">
-        <span class="fc-ico" style="background:rgba(60,224,168,.15)">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#5fe6b2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="fc-ico" style="background:rgba(34,211,238,.15)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="13" height="11" rx="2.5" stroke="#22d3ee" stroke-width="2"/><path d="M16 10.5 21 8v9l-5-2.5" stroke="#22d3ee" stroke-width="2" stroke-linejoin="round"/></svg>
         </span>
-        <span>Shop approved ✓<small>Market manager, 1 tap</small></span>
+        <span>Incoming video call — Apple<small>rings above the lock screen</small></span>
       </div>
       <div class="float-chip fc-2">
-        <span class="fc-ico" style="background:rgba(108,124,255,.18)">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" stroke="#aab4ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="fc-ico" style="background:rgba(95,230,178,.15)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" stroke="#5fe6b2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
-        <span>฿12,400 this week<small>Live revenue dashboard</small></span>
+        <span>฿248,900 this month<small>live market dashboard</small></span>
       </div>
       <div class="float-chip fc-3">
         <span class="fc-ico" style="background:rgba(242,193,78,.15)">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z" stroke="#f4d387" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.6-9.5-9A5.4 5.4 0 0 1 12 7a5.4 5.4 0 0 1 9.5 5c-2 4.4-9.5 9-9.5 9z" stroke="#f4d387" stroke-width="2" stroke-linejoin="round"/></svg>
         </span>
-        <span>24 orders today<small>Kitchen queue, real time</small></span>
+        <span>You're both here<small>live presence · honest accuracy rings</small></span>
       </div>
 
-      <div class="phone">
-        <div class="phone-screen">
-          <div class="notch"></div>
-          <div class="app-band">
-            <div class="t1">🌙 ตลาดนัดริมคลองบางบอน</div>
-            <div class="t2">เปิดทุกวัน 16:00-23:00 · 2 ร้านเปิดตอนนี้</div>
+      <div class="app-cards">
+        <a class="app-card app-card--tg" href="index.html#showcase" aria-label="Thaigether case study">
+          <div class="app-top">
+            <img class="app-ic" src="assets/thaigether/icon.png" alt="Thaigether app icon">
+            <div><b>Thaigether</b><small>Couples &amp; close circles — live map, chat, HD calls</small></div>
+            <span class="app-go">Case study ↓</span>
           </div>
-          <div class="app-row">
-            <span class="chip on">🏪 ทุกตลาด</span>
-            <span class="chip">☀️ กลางวัน</span>
-            <span class="chip">🌙 กลางคืน</span>
+          <div class="app-chips"><span>🛰 1 s live presence</span><span>📞 rings above lock screen</span><span>🌦 rain radar vault</span><span>💬 voice-note chat</span></div>
+        </a>
+        <a class="app-card app-card--ts" href="index.html#talatsuite" aria-label="TalatSuite case study">
+          <div class="app-top">
+            <span class="app-ic-txt" aria-hidden="true">🌙</span>
+            <div><b>TalatSuite</b><small>Night markets, run end to end — from one phone</small></div>
+            <span class="app-go">Case study ↓</span>
           </div>
-          <div class="mcard">
-            <span class="emo">🌙</span>
-            <span style="flex:1"><b>ตลาดนัดริมคลองบางบอน</b><small>🕒 เปิดทุกวัน 16:00-23:00 น.</small></span>
-            <span class="tag night">กลางคืน</span>
-          </div>
-          <div class="mcard">
-            <span class="emo">🌳</span>
-            <span style="flex:1"><b>ตลาดสวนลุมไนท์</b><small>🕒 เปิด ศ-อา 17:00-24:00 น.</small></span>
-            <span class="tag night">กลางคืน</span>
-          </div>
-          <div class="mcard">
-            <span class="emo">☀️</span>
-            <span style="flex:1"><b>ตลาดกลางวันริมทางรถไฟ</b><small>🕒 เปิด จ-ส 06:00-13:00 น.</small></span>
-            <span class="tag day">กลางวัน</span>
-          </div>
-          <div class="app-card">
-            <div class="h"><span>🍕 พิซซ่าอิฐร้อน บี</span><span>4.9 ★</span></div>
-            <div class="bar-row"><span>ฮาวายเอี้ยน</span><span class="bar"><i style="width:72%"></i></span><span>฿159</span></div>
-            <div class="bar-row"><span>มาการีตา</span><span class="bar"><i style="width:58%"></i></span><span>฿139</span></div>
-          </div>
-          <div class="app-card" style="border-color:rgba(60,224,168,.3)">
-            <div class="h"><span style="color:#5fe6b2">● ออเดอร์ #24 กำลังปรุง</span><span>2 นาทีที่แล้ว</span></div>
-          </div>
-        </div>
+          <div class="app-chips"><span>🧾 one-hand POS</span><span>🗂 approvals &amp; audit log</span><span>📊 live dashboards</span><span>📦 448 KB APK</span></div>
+        </a>
       </div>
     </div>
   </div>
@@ -593,7 +641,7 @@ html.th .eyebrow{letter-spacing:.05em}
 
 <!-- ═══════════ SOCIAL PROOF MARQUEE ═══════════ -->
 <div class="marquee-sec" aria-label="Industries served">
-  <p class="marquee-label">Trusted across the ecosystem</p>
+  <p class="marquee-label">From couples to night markets — built for real life</p>
   <div class="marquee">
     <div class="marquee-track" id="mq">
       <span>Night markets <i>✦</i> Cafés &amp; restaurants <i>✦</i> Retail shops <i>✦</i> Food vendors <i>✦</i> Property managers <i>✦</i> Service businesses <i>✦</i> Enterprise teams <i>✦</i> Community platforms <i>✦</i> Personal brands <i>✦</i> Market operators <i>✦</i></span>
@@ -601,58 +649,6 @@ html.th .eyebrow{letter-spacing:.05em}
     </div>
   </div>
 </div>
-
-<!-- ═══════════ SERVICES ═══════════ -->
-<section id="services" aria-labelledby="services-h">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow reveal">What I build</span>
-      <h2 class="h2 reveal" style="--d:.08s" id="services-h">Everything your business needs to <span class="grad-text">run smarter</span></h2>
-      <p class="sub reveal" style="--d:.14s">One partner for the whole stack: strategy, design, code, launch and everything after.</p>
-    </div>
-    <div class="bento">
-      <article class="card b-1 reveal">
-        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3 3 7.5v9L12 21l9-4.5v-9L12 3zM3 7.5 12 12m0 0 9-4.5M12 12v9" stroke="#aab4ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <h3>Custom Web &amp; Mobile Apps</h3>
-        <p>Full-stack applications your team and your customers actually enjoy using: ordering systems, dashboards, marketplaces, portals. Built mobile-first and shipped as a web app, an installable Android app, or both.</p>
-        <ul class="list-checks">
-          <li>Ordering, booking and payment-ready flows</li>
-          <li>Role-based dashboards for every team member</li>
-          <li>Works online, offline and on low-end phones</li>
-        </ul>
-      </article>
-      <article class="card b-2 reveal" style="--d:.08s">
-        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="6" height="16" rx="1.6" stroke="#aab4ff" stroke-width="1.9"/><rect x="10.5" y="4" width="6" height="10" rx="1.6" stroke="#aab4ff" stroke-width="1.9"/><rect x="18" y="4" width="3" height="14" rx="1.4" stroke="#aab4ff" stroke-width="1.9"/></svg></span>
-        <h3>Operations Systems</h3>
-        <p>POS, kitchen queues, inventory, approvals. I digitize the paperwork and the whiteboard.</p>
-      </article>
-      <article class="card b-3 reveal">
-        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#aab4ff" stroke-width="1.9"/><path d="M3 12h18M12 3c2.5 2.6 3.9 5.7 3.9 9S14.5 18.4 12 21c-2.5-2.6-3.9-5.7-3.9-9S9.5 5.6 12 3z" stroke="#aab4ff" stroke-width="1.9"/></svg></span>
-        <h3>Websites &amp; Landing Pages</h3>
-        <p>Fast, conversion-focused sites that make your business look the way it deserves.</p>
-      </article>
-      <article class="card b-4 reveal" style="--d:.08s">
-        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11z" stroke="#aab4ff" stroke-width="1.9"/><circle cx="12" cy="10" r="2.6" stroke="#aab4ff" stroke-width="1.9"/></svg></span>
-        <h3>Google Presence &amp; Social</h3>
-        <p>Get found, with Business Profile, maps, reviews and social setup done properly.</p>
-      </article>
-      <article class="card b-5 reveal" style="--d:.16s">
-        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 20V10m6 10V4m6 16v-7" stroke="#aab4ff" stroke-width="2.1" stroke-linecap="round"/></svg></span>
-        <h3>Data, Reports &amp; Automation</h3>
-        <p>Real CSV and PDF exports, metrics and audit trails, so your numbers are always yours to take.</p>
-      </article>
-      <article class="card b-6 reveal" style="--d:.1s">
-        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm10 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM3 19c.6-2.8 2.2-4 4-4s3.4 1.2 4 4m6-4c1.8 0 3.4 1.2 4 4" stroke="#aab4ff" stroke-width="1.9" stroke-linecap="round"/></svg></span>
-        <div>
-          <h3>One Long-term Partner, Not a Vendor</h3>
-          <p>I learn your whole business, then maintain, extend and support everything I build. You talk to the person who wrote the code, every time.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ SHOWCASE: TALATSUITE ═══════════ -->
 
 <section id="showcase" aria-labelledby="tg-h" style="padding-top:110px">
   <div class="wrap">
@@ -662,12 +658,31 @@ html.th .eyebrow{letter-spacing:.05em}
       <p class="sub reveal" style="--d:.14s">A private live location + comms app built for couples and close circles — shared real-time GPS on a cinematic map, media-rich chat with 60-second voice notes, HD video &amp; voice calls that erupt above the lock screen, deep-sleep push through Firebase, and a full weather vault (live rain radar + 7 days observed + 16 forecast) for wherever your person stands. One free stack, zero monthly cost.</p>
     </div>
 
-    <div class="show-cols" style="align-items:center">
-      <div class="reveal tg-phones" aria-hidden="true">
-        <img class="tg-shot" src="assets/thaigether/radar.jpg" alt="Thaigether live rain radar map">
-        <img class="tg-shot tg-two" src="assets/thaigether/sheet.jpg" alt="Partner card with live actions">
-        <img class="tg-badge" src="assets/thaigether/icon.png" alt="Thaigether icon">
+    <div class="cs-grid">
+      <div class="cs-card reveal">
+        <h4 style="color:#22d3ee">◆ Why it exists</h4>
+        <p>Two people, 780 km apart, whose calls kept dying in their phones' sleep. Existing apps treated "video call" as an afterthought behind lock screens and battery managers. Thaigether started as "what if being together was the entire app?"</p>
       </div>
+      <div class="cs-card reveal" style="--d:.08s">
+        <h4 style="color:#22d3ee">◆ What I built</h4>
+        <p>Presence + voice engineered like infrastructure: 1-second GPS with honest accuracy rings, data-only FCM push that wakes deep-sleep phones, WebRTC calling over STUN + open TURN relays, and a weather vault attached to live radar. Bilingual Thai ⇄ English on every surface.</p>
+      </div>
+      <div class="cs-card reveal" style="--d:.16s">
+        <h4 style="color:#22d3ee">◆ Where it stands</h4>
+        <p>Version 17, live in daily use. Ships as an instant web app and a signed native Android shell from one Next.js 15 codebase — on a stack engineered to cost <b>$0/month</b> (Vercel, Firebase free tier, OpenStreetMap, RainViewer).</p>
+      </div>
+    </div>
+
+    <div class="gallery reveal" aria-label="Thaigether screens">
+      <figure class="shotf"><img src="assets/thaigether/radar.jpg" alt="Thaigether live rain radar over Thailand with clock-time timeline" loading="lazy"><figcaption>Live rain radar · <em>real screen</em></figcaption></figure>
+      <figure class="shotf"><img src="assets/thaigether/shot-people.jpg" alt="Thaigether People screen showing live presence, distance and battery honesty" loading="lazy"><figcaption>People · live presence</figcaption></figure>
+      <figure class="shotf"><img src="assets/thaigether/shot-chat.jpg" alt="Thaigether chat with photos, voice notes, reactions and seen receipts" loading="lazy"><figcaption>Chat · voice notes &amp; reactions</figcaption></figure>
+      <figure class="shotf"><img src="assets/thaigether/shot-call.jpg" alt="Thaigether incoming video call erupting above the lock screen" loading="lazy"><figcaption>Incoming call · <em>above lock screen</em></figcaption></figure>
+      <figure class="shotf"><img src="assets/thaigether/shot-weather.jpg" alt="Thaigether weather vault with hourly strip, 7-day rows and rain radar NOW marker" loading="lazy"><figcaption>Weather vault · drill any hour</figcaption></figure>
+      <figure class="shotf"><img src="assets/thaigether/sheet.jpg" alt="Thaigether partner action card with show on map, follow, fresh location, chat and video call" loading="lazy"><figcaption>Partner card · <em>real screen</em></figcaption></figure>
+    </div>
+
+    <div class="show-cols" style="align-items:center;margin-top:26px">
       <div class="reveal">
         <ul class="feat-list">
           <li><b>🛰 Live presence that survives the night.</b> Real-time dots + trails at 1s cadence, accuracy honesty rings, deep-sleep FCM push so messages and rings wake the phone even swiped-away.</li>
@@ -682,10 +697,36 @@ html.th .eyebrow{letter-spacing:.05em}
           <div class="tgm"><b>23 days</b><span>weather universe</span></div>
           <div class="tgm"><b>$0</b><span>monthly backbone</span></div>
         </div>
+        <div class="tech-chips">
+          <span>TypeScript</span><span>Next.js 15 · React 19</span><span>Capacitor 8</span><span>Firebase FCM</span><span>WebRTC · STUN/TURN</span><span>OpenStreetMap</span><span>RainViewer</span><span>Vercel</span>
+        </div>
         <div class="cta-row" style="justify-content:flex-start;margin-top:22px">
           <a class="btn btn-primary" href="https://thaigether.vercel.app" target="_blank" rel="noopener">Launch live app</a>
-          <a class="btn btn-ghost" href="https://thaigether.vercel.app/downloads/Thaigether-native.apk" target="_blank" rel="noopener">⬇ Android APK (v17)</a>
+          <a class="btn btn-ghost" href="assets/thaigether/Thaigether.apk" download>⬇ Android APK · v17 · 12 MB</a>
           <a class="btn btn-ghost" href="https://thaigether.vercel.app/downloads" target="_blank" rel="noopener">Guide</a>
+        </div>
+      </div>
+      <div class="reveal" style="--d:.12s">
+        <div class="reviews">
+          <div class="testi" style="grid-template-columns:1fr">
+            <article class="t-card">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"The call actually rings. Our old app slept through everything — now when I call, her phone lights up like a phone call should. At 11pm, that matters."</p>
+              <div class="t-who">
+                <span class="avatar av-2" aria-hidden="true">M</span>
+                <div><b>Mild P.</b><span>Daily pilot user · Bangkok ⇄ Chiang Mai</span></div>
+              </div>
+            </article>
+            <article class="t-card" style="margin-top:14px">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"The map is our fridge door — I watch his dot pull into the soi before the 'ถึงแล้วจ้า' text even lands. And the rain radar has saved my delivery scooter twice this week."</p>
+              <div class="t-who">
+                <span class="avatar av-1" aria-hidden="true">K</span>
+                <div><b>Kartoon S.</b><span>Pilot household · rides a scooter, owns rain gear now</span></div>
+              </div>
+            </article>
+          </div>
+          <p class="reviews-note">Early feedback from pilot households — quoted with names shortened.</p>
         </div>
       </div>
     </div>
@@ -695,10 +736,31 @@ html.th .eyebrow{letter-spacing:.05em}
 <section id="talatsuite" aria-labelledby="showcase-h">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow reveal">Case study · operations suite</span>
+      <span class="eyebrow reveal">Case study · operations suite · live pilot</span>
       <h2 class="h2 reveal" style="--d:.08s" id="showcase-h">TalatSuite, <span class="grad-text">running real markets end to end</span></h2>
       <p class="sub reveal" style="--d:.14s">A complete platform for Thai day and night markets that I designed, built and tested end to end. Customers order from any shop. Vendors run a POS and kitchen queue. Managers run revenue and lot maps. Admins approve everything. And one codebase ships as a web app, an offline single file and a signed Android APK.</p>
     </div>
+    <div class="cs-grid">
+      <div class="cs-card reveal">
+        <h4 style="color:#5fe6b2">◆ Why it exists</h4>
+        <p>Real Thai markets run on paper slips, shouted orders and LINE groups. Vendor approvals happen by word of mouth; rent lives in a notebook. I owned businesses like this for 15 years — so I built the system I always wanted.</p>
+      </div>
+      <div class="cs-card reveal" style="--d:.08s">
+        <h4 style="color:#5fe6b2">◆ What I built</h4>
+        <p>One platform, four roles: guests order with just a phone number, vendors run a one-hand POS with a kitchen kanban, managers watch live revenue and approve lots on a real map, and admins hold an audit log of everything.</p>
+      </div>
+      <div class="cs-card reveal" style="--d:.16s">
+        <h4 style="color:#5fe6b2">◆ Where it stands</h4>
+        <p>Live pilot on Render, 52 API endpoints over 13 tables, <b>414 automated E2E checks</b> guarding every build — shipped as web app, a self-contained offline demo, and a 448 KB signed APK. Thai-first, English included.</p>
+      </div>
+    </div>
+
+    <div class="gallery reveal" aria-label="TalatSuite screens">
+      <figure class="shotf"><img src="assets/talatsuite/shot-order.jpg" alt="TalatSuite guest ordering screen with menu tiles, cart and tracking code" loading="lazy"><figcaption>Guest ordering · <em>no signup wall</em></figcaption></figure>
+      <figure class="shotf"><img src="assets/talatsuite/shot-pos.jpg" alt="TalatSuite vendor POS kitchen kanban with new, cooking and served columns" loading="lazy"><figcaption>Vendor kitchen kanban</figcaption></figure>
+      <figure class="shotf"><img src="assets/talatsuite/shot-dash.jpg" alt="TalatSuite manager dashboard with revenue chart, approvals and lot map" loading="lazy"><figcaption>Manager dashboard &amp; lot map</figcaption></figure>
+    </div>
+
 
     <div class="show-cols">
       <div class="reveal" aria-hidden="true">
@@ -846,6 +908,28 @@ html.th .eyebrow{letter-spacing:.05em}
           <span class="mchip"><b>440 KB</b> signed Android APK</span>
           <span class="mchip"><b>2</b> languages, zero mixed text</span>
         </div>
+        
+    <div class="reviews reveal">
+      <div class="testi">
+        <article class="t-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>"ซ้อมกับลูกร้านครึ่งชั่วโมงก็ใช้เป็นทั้งแผง — the queue screen is just three columns. Older vendors picked it up faster than the young ones. ไม่ต้องจดกระดาษอีกแล้ว."</p>
+          <div class="t-who">
+            <span class="avatar av-3" aria-hidden="true">D</span>
+            <div><b>ป้าแดง (Auntie Daeng)</b><span>Khanom Thai stall owner, pilot market</span></div>
+          </div>
+        </article>
+        <article class="t-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>"Approving a new vendor used to be three phone calls and a notebook. Now I tap อนุมัติ and there's an audit trail. First month on the dashboard we finally saw which nights actually pay the lights."</p>
+          <div class="t-who">
+            <span class="avatar av-1" aria-hidden="true">S</span>
+            <div><b>Somchai W.</b><span>Market manager, Bang Bon</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="reviews-note">Pilot-market feedback, Thai as spoken — quoted with names shortened.</p>
+    </div>
         <div class="show-demo-cta">
           <a class='btn btn-primary btn-sm' href='demo.html'>Try the live demo
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
@@ -864,6 +948,58 @@ html.th .eyebrow{letter-spacing:.05em}
     </div>
   </div>
 </section>
+
+<!-- ═══════════ SERVICES ═══════════ -->
+<section id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow reveal">What I build</span>
+      <h2 class="h2 reveal" style="--d:.08s" id="services-h">Everything your business needs to <span class="grad-text">run smarter</span></h2>
+      <p class="sub reveal" style="--d:.14s">One partner for the whole stack: strategy, design, code, launch and everything after.</p>
+    </div>
+    <div class="bento">
+      <article class="card b-1 reveal">
+        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3 3 7.5v9L12 21l9-4.5v-9L12 3zM3 7.5 12 12m0 0 9-4.5M12 12v9" stroke="#aab4ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Custom Web &amp; Mobile Apps</h3>
+        <p>Full-stack applications your team and your customers actually enjoy using: ordering systems, dashboards, marketplaces, portals. Built mobile-first and shipped as a web app, an installable Android app, or both.</p>
+        <ul class="list-checks">
+          <li>Ordering, booking and payment-ready flows</li>
+          <li>Role-based dashboards for every team member</li>
+          <li>Works online, offline and on low-end phones</li>
+        </ul>
+      </article>
+      <article class="card b-2 reveal" style="--d:.08s">
+        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="6" height="16" rx="1.6" stroke="#aab4ff" stroke-width="1.9"/><rect x="10.5" y="4" width="6" height="10" rx="1.6" stroke="#aab4ff" stroke-width="1.9"/><rect x="18" y="4" width="3" height="14" rx="1.4" stroke="#aab4ff" stroke-width="1.9"/></svg></span>
+        <h3>Operations Systems</h3>
+        <p>POS, kitchen queues, inventory, approvals. I digitize the paperwork and the whiteboard.</p>
+      </article>
+      <article class="card b-3 reveal">
+        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#aab4ff" stroke-width="1.9"/><path d="M3 12h18M12 3c2.5 2.6 3.9 5.7 3.9 9S14.5 18.4 12 21c-2.5-2.6-3.9-5.7-3.9-9S9.5 5.6 12 3z" stroke="#aab4ff" stroke-width="1.9"/></svg></span>
+        <h3>Websites &amp; Landing Pages</h3>
+        <p>Fast, conversion-focused sites that make your business look the way it deserves.</p>
+      </article>
+      <article class="card b-4 reveal" style="--d:.08s">
+        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11z" stroke="#aab4ff" stroke-width="1.9"/><circle cx="12" cy="10" r="2.6" stroke="#aab4ff" stroke-width="1.9"/></svg></span>
+        <h3>Google Presence &amp; Social</h3>
+        <p>Get found, with Business Profile, maps, reviews and social setup done properly.</p>
+      </article>
+      <article class="card b-5 reveal" style="--d:.16s">
+        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 20V10m6 10V4m6 16v-7" stroke="#aab4ff" stroke-width="2.1" stroke-linecap="round"/></svg></span>
+        <h3>Data, Reports &amp; Automation</h3>
+        <p>Real CSV and PDF exports, metrics and audit trails, so your numbers are always yours to take.</p>
+      </article>
+      <article class="card b-6 reveal" style="--d:.1s">
+        <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm10 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM3 19c.6-2.8 2.2-4 4-4s3.4 1.2 4 4m6-4c1.8 0 3.4 1.2 4 4" stroke="#aab4ff" stroke-width="1.9" stroke-linecap="round"/></svg></span>
+        <div>
+          <h3>One Long-term Partner, Not a Vendor</h3>
+          <p>I learn your whole business, then maintain, extend and support everything I build. You talk to the person who wrote the code, every time.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SHOWCASE: TALATSUITE ═══════════ -->
 
 <!-- ═══════════ PROCESS ═══════════ -->
 <section id="process" aria-labelledby="process-h">
@@ -1203,7 +1339,8 @@ html.th .eyebrow{letter-spacing:.05em}
       <nav aria-label="Site">
         <h4>Site</h4>
         <a href="index.html#services">Services</a>
-        <a href="index.html#showcase">Work: Thaigether</a>
+        <a href="index.html#showcase">Thaigether</a>
+        <a href="index.html#talatsuite">TalatSuite</a>
         <a href="index.html#process">Process</a>
         <a href="index.html#about">About</a>
       </nav>
