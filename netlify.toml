@@ -1,0 +1,10 @@
+# davidwhitaker.netlify.app — static single-file site. No build step.
+# NOTE: repo config wins over dashboard UI settings. Do not add a build command.
+[build]
+  publish = "."
+
+[context.deploy-preview]
+  publish = "."
+
+[context.branch-deploy]
+  publish = "."
