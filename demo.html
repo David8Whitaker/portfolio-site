@@ -2246,12 +2246,12 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
       db.users.push(u);
       return u;
     }
-    var U_ADMIN = addUser('admin', 'admin123', 'admin', 'เจ้าของระบบ');
-    var U_SOMCHAI = addUser('somchai', 'market123', 'manager', 'สมชาย ใจดี', { market_id: 1 });
-    var U_PRAKAI = addUser('prakai', 'market123', 'manager', 'ปรักษ์ วงศ์สว่าง', { market_id: 2 });
-    addUser('pizzabee', 'vendor123', 'vendor', 'บี · พิซซ่าอิฐร้อน', { shop_id: SH1 });
-    addUser('chaed', 'vendor123', 'vendor', 'เจ๊แอ๊ด · ชาไทย', { shop_id: SH2 });
-    addUser('boss', 'vendor123', 'vendor', 'พี่บอส · สเต็กเตาถ่าน', { shop_id: 3 });
+    var U_ADMIN = addUser('admin', 'local-admin-demo', 'admin', 'เจ้าของระบบ');
+    var U_SOMCHAI = addUser('somchai', 'local-mgr-demo', 'manager', 'สมชาย ใจดี', { market_id: 1 });
+    var U_PRAKAI = addUser('prakai', 'local-mgr-demo', 'manager', 'ปรักษ์ วงศ์สว่าง', { market_id: 2 });
+    addUser('pizzabee', 'local-vendor-demo', 'vendor', 'บี · พิซซ่าอิฐร้อน', { shop_id: SH1 });
+    addUser('chaed', 'local-vendor-demo', 'vendor', 'เจ๊แอ๊ด · ชาไทย', { shop_id: SH2 });
+    addUser('boss', 'local-vendor-demo', 'vendor', 'พี่บอส · สเต็กเตาถ่าน', { shop_id: 3 });
     /* v6: เจ้าของร้าน + สถานะเริ่มต้น */
     db.users.forEach(function (u) {
       if (u.role === 'vendor' && u.shop_id) {
@@ -2262,8 +2262,8 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
     db.shops.forEach(function (s) { if (!s.status) s.status = 'approved'; if (s.owner_user_id == null) s.owner_user_id = null; });
     db.markets.forEach(function (m) { if (!m.status) m.status = 'approved'; if (!m.market_type) m.market_type = 'night'; });
     db.applications = db.applications || [];
-    var U_ARAYA = addUser('0890000001', 'cust123', 'customer', 'คุณอารยา', { phone: '089-000-0001' });
-    var U_MALI = addUser('0860000002', 'cust123', 'customer', 'น้องมะลิ', { phone: '086-000-0002' });
+    var U_ARAYA = addUser('0890000001', 'local-cust-demo', 'customer', 'คุณอารยา', { phone: '089-000-0001' });
+    var U_MALI = addUser('0860000002', 'local-cust-demo', 'customer', 'น้องมะลิ', { phone: '086-000-0002' });
     /* ผูกออเดอร์ตัวอย่างกับบัญชีลูกค้า */
     db.orders.forEach(function (o) {
       if (o.customer_name === 'คุณอารยา') { o.customer_user_id = U_ARAYA.id; o.customer_id = 'u:' + U_ARAYA.id; }
@@ -5869,7 +5869,7 @@ function openLoginScreen() {
         <div class="login-demo">
           <b>บัญชีทดลอง (แตะเพื่อกรอกให้อัตโนมัติ)</b>
           <div class="demo-accounts">
-            <button type="button" class="demo-acct" data-lg="admin|admin123">🛡️ admin / admin123</button><button type="button" class="demo-acct" data-lg="somchai|market123">🏪 somchai / market123</button><button type="button" class="demo-acct" data-lg="pizzabee|vendor123">🍜 pizzabee / vendor123</button><button type="button" class="demo-acct" data-lg="0890000001|cust123">🛒 0890000001 / cust123</button>
+            <button type="button" class="demo-acct" data-lg="admin|local-admin-demo">🛡️ admin / local-admin-demo</button><button type="button" class="demo-acct" data-lg="somchai|local-mgr-demo">🏪 somchai / local-mgr-demo</button><button type="button" class="demo-acct" data-lg="pizzabee|local-vendor-demo">🍜 pizzabee / local-vendor-demo</button><button type="button" class="demo-acct" data-lg="0890000001|local-cust-demo">🛒 0890000001 / local-cust-demo</button>
           </div>
         </div>
       </div>

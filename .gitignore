@@ -1,0 +1,8 @@
+# NEVER commit node_modules again (repo history was surgically cleaned Sep 2026)
+node_modules/
+package-lock.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
