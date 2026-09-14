@@ -10961,5 +10961,19 @@ document.addEventListener('click', (e) => {
 });
 
 </script>
+<script>
+/* GA4 demo events */
+(function () {
+  function ev(n) { try { gtag('event', n); } catch (e) {} }
+  ev('demo_app_open');
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-start], .ro-card, .cu-submit');
+    if (!el) return;
+    var s = el.getAttribute('data-start');
+    if (s) ev('demo_' + s);
+    else if (el.classList.contains('cu-submit')) ev('demo_order_submit');
+  });
+})();
+</script>
 </body>
 </html>
