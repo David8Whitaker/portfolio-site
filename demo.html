@@ -3699,6 +3699,7 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
       'font:600 12px/1 Kanit,system-ui,sans-serif;padding:9px 13px;border-radius:999px;cursor:pointer;' +
       'backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 4px 14px rgba(0,0,0,.35);transition:background .2s}' +
       '#offline-reset.arm{background:#7c2d1e;border-color:#ff9d8a;color:#ffe9e4}' +
+      '#offline-reset.lift{bottom:calc(var(--bb-h,78px) + 104px + env(safe-area-inset-bottom,0px))}' +
       '@media (min-width:1080px){#offline-reset{bottom:16px}}';
     document.head.appendChild(style);
 
@@ -3741,6 +3742,8 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
       var side = document.querySelector('#db-chip-side .tx');
       if (side && side.textContent.indexOf('PostgreSQL') >= 0) side.textContent = sideText;
       var head = document.querySelector('#db-chip-head');
+      var cb = document.querySelector('.pos-cartbar:not([hidden])');
+      btn.classList.toggle('lift', !!(cb && cb.offsetHeight > 0 && window.innerWidth < 1080));
       if (head && (head.textContent.trim() === 'ออนไลน์' || head.textContent.trim() === '…')) {
         head.innerHTML = '<span class="dot" style="background:#7dffa8"></span>พร้อมใช้งาน';
       }
@@ -8467,7 +8470,7 @@ function renderVendorPosTab() {
         ${v.menu.map((it) => {
           const qty = v.cart[it.id] || 0;
           const visual = it.image
-            ? `<span class="mc-img"><img src="https://davidwhitaker.netlify.app/${esc(it.image)}" alt=""></span>`
+            ? `<span class="mc-img"><img src="${esc(it.image)}" alt=""></span>`
             : `<span class="mc-emo">${esc(it.emoji)}</span>`;
           return `
           <div class="menu-card ${it.available ? '' : 'off'}" data-id="${it.id}">
@@ -9022,7 +9025,7 @@ function renderMenuTab() {
     <div class="mm-note">💡 แตะที่รายการเพื่อแก้ไขละเอียด (ชื่อ ราคา รูปภาพ อิโมจิ) · แก้ราคาได้ทันทีในช่องราคา · สลับ "พร้อมขาย/สินค้าหมด" ได้ทุกเมื่อ</div>
     ${items.length ? items.map((it) => `
       <div class="mm-row ${it.available ? '' : 'off'}" data-id="${it.id}">
-        <span class="mm-emo">${it.image ? `<img src="https://davidwhitaker.netlify.app/${esc(it.image)}" alt="">` : esc(it.emoji)}</span>
+        <span class="mm-emo">${it.image ? `<img src="${esc(it.image)}" alt="">` : esc(it.emoji)}</span>
         <div class="mm-info">
           <b>${esc(it.name)}</b>
           <span class="mm-status ${it.available ? 'on' : 'off'}">${it.available ? '● พร้อมขาย' : '● สินค้าหมด'}</span>
@@ -9147,7 +9150,7 @@ function openMenuItemSheet(existing) {
     body: `
       <div class="field"><label>รูปถ่ายเมนู (ถ้ามี)</label>
         <div class="mi-photo">
-          <div class="mi-preview" id="mi-preview">${imageData ? `<img src="https://davidwhitaker.netlify.app/${esc(imageData)}" alt="">` : '<span>🍽️</span>'}</div>
+          <div class="mi-preview" id="mi-preview">${imageData ? `<img src="${esc(imageData)}" alt="">` : '<span>🍽️</span>'}</div>
           <div class="mi-photo-btns">
             <label class="btn ghost sm" style="margin:0">📷 เลือกรูป<input type="file" id="mi-file" accept="image/*" hidden></label>
             ${imageData ? '<button class="btn danger sm" id="mi-rmimg" type="button" style="margin:0">ลบรูป</button>' : ''}
@@ -9184,7 +9187,7 @@ function openMenuItemSheet(existing) {
     try {
       imageData = await readImageAsDataURI(file);
       const pv = md.body.querySelector('#mi-preview');
-      pv.innerHTML = `<img src="https://davidwhitaker.netlify.app/${esc(imageData)}" alt="">`;
+      pv.innerHTML = `<img src="${esc(imageData)}" alt="">`;
       if (!md.body.querySelector('#mi-rmimg')) {
         const rm = document.createElement('button');
         rm.className = 'btn danger sm'; rm.id = 'mi-rmimg'; rm.type = 'button';
@@ -9393,7 +9396,7 @@ function renderCustomerMarkets() {
             ${mk.address ? `<span class="mkc-meta">📍 ${esc(mk.address)}</span>` : ''}
             <span class="mkc-meta">🕒 ${esc(mk.schedule_text || mk.hours_text || '—')}</span>
             <span class="mkc-meta">${mk.shops_open}/${mk.shops_total} ร้านเปิด</span>
-            ${(mk.lat != null && mk.lng != null) || mk.address ? `<a class="map-chip" data-maplink href="https://davidwhitaker.netlify.app/${mapsUrlOf(mk)}" target="_blank" rel="noopener">🗺 เปิดแผนที่ · นำทาง</a>` : ''}
+            ${(mk.lat != null && mk.lng != null) || mk.address ? `<a class="map-chip" data-maplink href="${mapsUrlOf(mk)}" target="_blank" rel="noopener">🗺 เปิดแผนที่ · นำทาง</a>` : ''}
           </div>
           <span class="open-badge ${mk.open_today ? 'on' : 'off'}">${mk.open_today ? 'เปิดวันนี้' : 'ปิดวันนี้'}</span>
         </div>`).join('')}
@@ -9434,11 +9437,11 @@ async function renderCustomerMarket() {
         </div>
       </div>
       <div class="map-actions">
-        <a class="btn ghost sm" data-maplink href="https://davidwhitaker.netlify.app/${mapsUrlOf(mk)}" target="_blank" rel="noopener">🧭 เปิดแผนที่</a>
+        <a class="btn ghost sm" data-maplink href="${mapsUrlOf(mk)}" target="_blank" rel="noopener">🧭 เปิดแผนที่</a>
         <a class="btn primary sm" data-maplink href="${mapsUrlOf(mk, true)}" target="_blank" rel="noopener">🚗 นำทางถึงตลาด</a>
       </div>
       ${mk.lat != null && mk.lng != null ? (OFFLINE_BUILD ? `
-      <a class="map-frame map-frame-link" data-maplink href="https://davidwhitaker.netlify.app/${mapsUrlOf(mk)}" target="_blank" rel="noopener" aria-label="เปิดแผนที่ ${esc(mk.name)}">
+      <a class="map-frame map-frame-link" data-maplink href="${mapsUrlOf(mk)}" target="_blank" rel="noopener" aria-label="เปิดแผนที่ ${esc(mk.name)}">
         <div class="map-fallback"><span class="mf-emo">🗺️</span><b>แผนที่ ${esc(mk.name)}</b><small>${mk.lat.toFixed(5)}, ${mk.lng.toFixed(5)}</small><small class="mf-tap">แตะเพื่อเปิดใน Google Maps</small></div>
       </a>` : `
       <div class="map-frame">
@@ -9506,7 +9509,7 @@ async function renderCustomerShop() {
         <button class="back-btn" id="cu-back-market" type="button" aria-label="กลับ">${IC.back}</button>
         <div class="ph-title">
           <h2>${esc(s.emoji)} ${esc(s.name)}</h2>
-          <p>${esc(s.market_name || '')}${s.lot_code ? ' · ล็อค ' + esc(s.lot_code) : ''} · ${esc(s.market_hours || '')}</p>
+          <p>${esc(s.market_name || '')}${s.lot_code ? ' · ล็อค ' + esc(s.lot_code) : ''}${s.market_hours ? ' · ' + esc(s.market_hours) : ''}</p>
         </div>
         ${roleBtnHTML()}
       </div>
@@ -9520,14 +9523,14 @@ async function renderCustomerShop() {
       ${s.phone || s.line_id || s.whatsapp || s.facebook || s.email ? `
       <div class="contact-row">
         ${s.phone ? `<a class="ct-btn ct-call" href="tel:${esc(s.phone)}" target="_blank" rel="noopener">${IC.phone} โทร</a>` : ''}
-        ${s.line_id ? `<a class="ct-btn ct-line" href="https://davidwhitaker.netlify.app/${esc(lineLink(s.line_id))}" target="_blank" rel="noopener">💬 LINE</a>` : ''}
-        ${s.whatsapp ? `<a class="ct-btn ct-wa" href="https://davidwhitaker.netlify.app/${esc(waLink(s.whatsapp))}" target="_blank" rel="noopener">🟢 WhatsApp</a>` : ''}
-        ${s.facebook ? `<a class="ct-btn ct-fb" href="https://davidwhitaker.netlify.app/${esc(fbLink(s.facebook))}" target="_blank" rel="noopener">📘 Facebook</a>` : ''}
+        ${s.line_id ? `<a class="ct-btn ct-line" href="${esc(lineLink(s.line_id))}" target="_blank" rel="noopener">💬 LINE</a>` : ''}
+        ${s.whatsapp ? `<a class="ct-btn ct-wa" href="${esc(waLink(s.whatsapp))}" target="_blank" rel="noopener">🟢 WhatsApp</a>` : ''}
+        ${s.facebook ? `<a class="ct-btn ct-fb" href="${esc(fbLink(s.facebook))}" target="_blank" rel="noopener">📘 Facebook</a>` : ''}
         ${s.email ? `<a class="ct-btn ct-mail" href="mailto:${esc(s.email)}" target="_blank" rel="noopener">✉️ อีเมล</a>` : ''}
       </div>` : '<div class="contact-row none">ร้านยังไม่ได้ใส่ช่องทางติดต่อ</div>'}
     </div>
 
-    ${s.market_schedule ? `<div class="mk-schedule-line">🕒 ตารางตลาด: <b>${esc(s.market_schedule)}</b>${(s.market_lat != null && s.market_lng != null) || s.market_address ? ` · <a class="map-chip" data-maplink href="https://davidwhitaker.netlify.app/${mapsUrlOf({ lat: s.market_lat, lng: s.market_lng, address: s.market_address })}" target="_blank" rel="noopener">🗺 แผนที่ตลาด</a>` : ''}</div>` : ''}
+    ${s.market_schedule ? `<div class="mk-schedule-line">🕒 ตารางตลาด: <b>${esc(s.market_schedule)}</b>${(s.market_lat != null && s.market_lng != null) || s.market_address ? ` · <a class="map-chip" data-maplink href="${mapsUrlOf({ lat: s.market_lat, lng: s.market_lng, address: s.market_address })}" target="_blank" rel="noopener">🗺 แผนที่ตลาด</a>` : ''}</div>` : ''}
     ${!canOrder ? `<div class="notice-banner warn">${!s.market_open ? '🌙 ตลาดนี้ปิดทำการวันนี้ — ดูเมนูได้ แต่ยังสั่งไม่ได้' : '🔴 ร้านนี้ปิดอยู่ในขณะนี้ — ดูเมนูได้ แต่ยังสั่งไม่ได้'}</div>` : ''}
 
     <h3 class="sec-title">🍕 เมนูของร้าน</h3>
@@ -9537,7 +9540,7 @@ async function renderCustomerShop() {
         const qty = (cu.carts[cu.shopId] || {})[it.id] || 0;
         const itemOrderable = canOrder && it.available;
         const visual = it.image
-          ? `<span class="mc-img"><img src="https://davidwhitaker.netlify.app/${esc(it.image)}" alt=""></span>`
+          ? `<span class="mc-img"><img src="${esc(it.image)}" alt=""></span>`
           : `<span class="mc-emo">${esc(it.emoji)}</span>`;
         return `
         <div class="menu-card cmenu ${it.available ? '' : 'off'}" data-id="${it.id}">
@@ -10957,20 +10960,6 @@ document.addEventListener('click', (e) => {
   document.addEventListener(ev, (e) => e.preventDefault(), { passive: false });
 });
 
-</script>
-<script>
-/* GA4 demo events */
-(function () {
-  function ev(n) { try { gtag('event', n); } catch (e) {} }
-  ev('demo_app_open');
-  document.addEventListener('click', function (e) {
-    var el = e.target.closest('[data-start], .ro-card, .cu-submit');
-    if (!el) return;
-    var s = el.getAttribute('data-start');
-    if (s) ev('demo_' + s);
-    else if (el.classList.contains('cu-submit')) ev('demo_order_submit');
-  });
-})();
 </script>
 </body>
 </html>
