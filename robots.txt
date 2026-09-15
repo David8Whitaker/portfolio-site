@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://davidwhitaker.netlify.app/sitemap.xml
+Sitemap: https://davidwhitaker.vercel.app/sitemap.xml

@@ -9,7 +9,11 @@ Static single-page portfolio. Flagship: **Thaigether** (consumer app) · second:
 - `site.webmanifest`, `sitemap.xml`, `robots.txt`, `og-image.jpg`
 
 ## Deploy
-Netlify site ID `3e825074-86f9-431a-9c0e-bea813785024`:
+Vercel project `davidwhitaker` → https://davidwhitaker.vercel.app (static, no build step).
+Git auto-deploys from `main`. Manual deploy if ever needed:
 ```
-npx netlify-cli deploy --prod --dir=. --site=3e825074-86f9-431a-9c0e-bea813785024 --auth $NETLIFY_TOKEN
+export VERCEL_TOKEN='<paste, use once, delete>'
+npx -y vercel deploy --prod --yes
 ```
+Retired Sep 2026: Netlify (`davidwhitaker.netlify.app`, site `3e825074-86f9-431a-9c0e-bea813785024`)
+— free build credits (300/mo) kept expiring and freezing the live site.
