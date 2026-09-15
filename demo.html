@@ -146,33 +146,33 @@
    ═══════════════════════════════════════════════════════════ */
 
 :root {
-  --bg: #f4f1e9;
-  --surface: #ffffff;
-  --surface-2: #faf8f2;
-  --ink: #1e2b25;
-  --ink-2: #44534b;
-  --muted: #5b6761;
-  --line: #e5dfd1;
-  --line-2: #efeade;
+  --bg: #0b1210;
+  --surface: #141e1a;
+  --surface-2: #1a2621;
+  --ink: #e9f2ec;
+  --ink-2: #bcc9c1;
+  --muted: #8fa098;
+  --line: #26332d;
+  --line-2: #1e2924;
 
-  --gold: #c9972e;
-  --gold-soft: #f7ecd4;
-  --ok: #1e8e3e;
-  --ok-deep: #166b2f;
-  --bad: #d3352b;
-  --bad-deep: #a82820;
-  --warn: #965a00;
+  --gold: #e8a13a;
+  --gold-soft: #241d0e;
+  --ok: #34d399;
+  --ok-deep: #6ee7b7;
+  --bad: #f87171;
+  --bad-deep: #fca5a5;
+  --warn: #fbbf24;
 
-  --vacant-bg: #ecebe6;
-  --vacant-ink: #60655e;
+  --vacant-bg: #202825;
+  --vacant-ink: #8fa098;
 
   /* สีหลักของแอป (ถูก override ตามหน้า) */
-  --acc: #0d7a4f;
-  --acc-deep: #0a5f3d;
-  --acc-soft: #e2f2e9;
+  --acc: #10b981;
+  --acc-deep: #34d399;
+  --acc-soft: #122b23;
 
-  --band-a: #0d3527;
-  --band-b: #155a3f;
+  --band-a: #071e16;
+  --band-b: #0b3527;
 
   --radius: 18px;
   --radius-sm: 13px;
@@ -331,7 +331,7 @@ svg { display: block; }
 @media (min-width: 1080px) {
   .pagehead { margin: 0 -26px 22px; border-radius: 0 0 28px 28px; padding: 18px 26px 18px; }
 }
-.view[data-app="pos"] { --acc: #bd4410; --acc-deep: #9c390d; --acc-soft: #fdeada; --band-a: #571f0c; --band-b: #8f3e11; }
+.view[data-app="pos"] { --acc: #10b981; --acc-deep: #34d399; --acc-soft: #122b23; --band-a: #071e16; --band-b: #0b3527; }
 
 .ph-top { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
 .ph-title { display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0; }
@@ -362,10 +362,10 @@ svg { display: block; }
 .metric .m-ic svg { width: 15px; height: 15px; }
 .metric .m-val { font-family: var(--font-disp); font-weight: 600; font-size: clamp(19px, 5.2vw, 27px); line-height: 1.15; margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .metric .m-sub { font-size: 11.5px; color: var(--muted); line-height: 1.3; }
-.metric.revenue { background: linear-gradient(140deg, #fffdf6, #fdf4dc); border-color: #ecd9a4; }
-.metric.revenue .m-ic { background: #f6e7bd; color: #8a6410; }
-.metric.revenue .m-val { color: #7c5a0d; }
-.metric.total .m-ic { background: #e2eefc; color: #1a5fb4; }
+.metric.revenue { background: linear-gradient(140deg, #22301c, #1a2618); border-color: #4a5a2a; }
+.metric.revenue .m-ic { background: #2a2113; color: #e8a13a; }
+.metric.revenue .m-val { color: #e8c87a; }
+.metric.total .m-ic { background: #1b2a3f; color: #7db3f7; }
 .metric.unpaidm .m-ic { background: #fde3df; color: #b3271d; }
 .metric.unpaidm .m-val { color: var(--bad-deep); }
 .metric button.m-link { background: none; border: none; padding: 2px 4px; margin-left: auto; font-size: 11.5px; color: var(--acc-deep); text-decoration: underline; font-weight: 600; }
@@ -374,7 +374,7 @@ svg { display: block; }
 .controls { display: flex; gap: 9px; margin-top: 12px; align-items: stretch; flex-wrap: wrap; }
 .seg {
   display: flex; gap: 4px; padding: 4px;
-  background: #eceada;
+  background: #101915;
   border: 1px solid var(--line);
   border-radius: 15px;
   flex: 1 1 220px;
@@ -387,20 +387,20 @@ svg { display: block; }
   white-space: normal; word-break: break-word;
 }
 .seg button.on { background: var(--acc); color: #fff; box-shadow: 0 2px 8px rgba(0, 0, 0, .22); }
-.view[data-app="pos"] .seg button.on { color: #b04512; }
+.view[data-app="pos"] .seg button.on { color: var(--acc-deep); }
 
 .datebtn {
   flex: 1 1 230px;
   display: flex; align-items: center; gap: 9px;
   min-height: 52px; padding: 6px 14px;
-  background: #fff; color: var(--ink);
+  background: var(--surface); color: var(--ink);
   border: none; border-radius: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, .18);
   font-weight: 600;
   text-align: left;
 }
 .datebtn .d-ic { width: 30px; height: 30px; border-radius: 9px; background: var(--acc-soft); color: var(--acc-deep); display: grid; place-items: center; flex: none; }
-.view[data-app="pos"] .datebtn .d-ic { background: #fdeada; color: #b04512; }
+.view[data-app="pos"] .datebtn .d-ic { background: var(--acc-soft); color: var(--acc-deep); }
 .datebtn .d-ic svg { width: 17px; height: 17px; }
 .datebtn .d-tx { min-width: 0; flex: 1; }
 .datebtn .d-tx b { display: block; font-size: 15px; font-family: var(--font-disp); line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -412,7 +412,7 @@ svg { display: block; }
 .row-head { display: flex; align-items: center; gap: 9px; margin: 2px 2px 10px; }
 .row-head .rh-badge {
   width: 34px; height: 34px; border-radius: 11px;
-  background: var(--ink); color: #fff;
+  background: var(--acc-soft); color: var(--acc-deep);
   display: grid; place-items: center;
   font-family: var(--font-disp); font-weight: 600; font-size: 16px;
 }
@@ -442,7 +442,7 @@ svg { display: block; }
 
 .lot.vacant { background: var(--vacant-bg); border-style: dashed; border-color: #cfd2cc; color: var(--vacant-ink); box-shadow: none; }
 .lot.vacant .lot-code { color: #565c56; }
-.lot.vacant .lot-vendor { color: #60655e; font-weight: 600; }
+.lot.vacant .lot-vendor { color: #8fa098; font-weight: 600; }
 .lot.vacant .lot-badge { color: #5f655f; }
 
 .lot.paid { background: linear-gradient(158deg, #197e3d 0%, #1b7a3c 78%); color: #eafff1; }
@@ -519,7 +519,7 @@ svg { display: block; }
   font-size: 16.5px;
   transition: border-color .15s, background .15s;
 }
-.tin:focus, .tsel:focus, .tarea:focus { outline: none; border-color: var(--acc); background: #fff; }
+.tin:focus, .tsel:focus, .tarea:focus { outline: none; border-color: var(--acc); background: var(--surface-2); }
 .tarea { min-height: 74px; resize: vertical; }
 .tsel { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23668' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
 .input-prefix { position: relative; }
@@ -527,7 +527,7 @@ svg { display: block; }
 .input-prefix .tin { padding-left: 36px; }
 
 /* segmented (ใน sheet พื้นขาว) */
-.seg.field-seg { background: #eceada; border: 1px solid var(--line); }
+.seg.field-seg { background: #101915; border: 1px solid var(--line); }
 .seg.field-seg button { min-height: 48px; color: var(--ink-2); }
 .seg.field-seg button.on { background: var(--acc); color: #fff; box-shadow: 0 3px 10px color-mix(in srgb, var(--acc) 40%, transparent); }
 .seg.field-seg button .sub { display: block; font-size: 11px; font-weight: 500; opacity: .8; }
@@ -565,7 +565,7 @@ svg { display: block; }
 .btn.primary { background: linear-gradient(150deg, var(--acc), var(--acc-deep)); color: #fff; box-shadow: 0 6px 16px color-mix(in srgb, var(--acc) 38%, transparent); }
 .btn.gold { background: linear-gradient(150deg, #e6b95f, #c9972e); color: #22301f; box-shadow: 0 6px 16px rgba(168, 124, 31, .4); }
 .btn.ghost { background: var(--surface-2); color: var(--ink-2); border: 1.6px solid var(--line); }
-.btn.danger { background: #fdecea; color: var(--bad-deep); border: 1.6px solid #f3c2ba; }
+.btn.danger { background: #2b1512; color: var(--bad-deep); border: 1.6px solid #5a2723; }
 .btn.block { width: 100%; }
 .btn.sm { min-height: 42px; font-size: 14px; border-radius: 12px; padding: 8px 14px; }
 .btn-row { display: flex; gap: 10px; margin-top: 6px; }
@@ -581,9 +581,9 @@ svg { display: block; }
 
 /* สถานะสดใน sheet */
 .state-preview { display: flex; align-items: center; gap: 9px; border-radius: 13px; padding: 10px 14px; font-size: 13.5px; font-weight: 700; margin-bottom: 16px; border: 1.5px dashed transparent; }
-.state-preview.paid { background: #e5f5ea; color: var(--ok-deep); border-color: #bce3c8; }
-.state-preview.unpaid { background: #fdeae7; color: var(--bad-deep); border-color: #f3c4bb; }
-.state-preview.vacant { background: #f0f0ec; color: var(--muted); border-color: #d8d8d0; }
+.state-preview.paid { background: #10271d; color: var(--ok-deep); border-color: #1f4a34; }
+.state-preview.unpaid { background: #2b1512; color: var(--bad-deep); border-color: #5a2723; }
+.state-preview.vacant { background: #202825; color: var(--muted); border-color: #33403a; }
 
 /* ═══════════ ปฏิทิน ═══════════ */
 .cal-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
@@ -602,22 +602,22 @@ svg { display: block; }
 }
 .cal-day:active { transform: scale(.94); }
 .cal-day.dim { color: #b9b5a8; background: transparent; }
-.cal-day.today { border-color: var(--gold); color: #8a6410; }
+.cal-day.today { border-color: var(--gold); color: #e8a13a; }
 .cal-day.sel { background: var(--acc); color: #fff; box-shadow: 0 4px 12px color-mix(in srgb, var(--acc) 45%, transparent); }
 .cal-day .pay-dot { position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); width: 5px; height: 5px; border-radius: 50%; background: var(--ok); }
 .cal-foot { display: flex; gap: 10px; margin-top: 14px; }
 
 /* ═══════════ dialog ยืนยัน ═══════════ */
 .confirm-ic { width: 58px; height: 58px; border-radius: 18px; margin: 4px auto 12px; display: grid; place-items: center; }
-.confirm-ic.warn { background: #fdf1d7; color: #a87c1f; }
-.confirm-ic.danger { background: #fdeae7; color: var(--bad-deep); }
+.confirm-ic.warn { background: #2a2113; color: #e8a13a; }
+.confirm-ic.danger { background: #2b1512; color: var(--bad-deep); }
 .confirm-ic svg { width: 30px; height: 30px; }
 .dialog-tx { text-align: center; }
 .dialog-tx h3 { font-size: 18.5px; margin-bottom: 6px; }
 .dialog-tx p { font-size: 14px; color: var(--ink-2); }
 
 /* ═══════════ POS: แท็บย่อย ═══════════ */
-.subtabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px; background: #eceada; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 16px; }
+.subtabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px; background: #101915; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 16px; }
 .subtabs button {
   flex: 1; min-height: 50px; border-radius: 12px; border: none;
   background: transparent; color: var(--ink-2);
@@ -625,7 +625,7 @@ svg { display: block; }
   display: flex; align-items: center; justify-content: center; gap: 7px;
   white-space: normal; line-height: 1.2; text-align: center; padding: 6px 4px;
 }
-.subtabs button.on { background: #fff; color: var(--acc-deep); box-shadow: 0 3px 10px rgba(30, 43, 37, .12); }
+.subtabs button.on { background: var(--surface-2); color: var(--acc-deep); box-shadow: 0 3px 10px rgba(0, 0, 0, .4); }
 .subtabs .badge-n {
   min-width: 22px; height: 22px; border-radius: 99px; padding: 0 6px;
   background: var(--acc); color: #fff; font-size: 12px; font-weight: 700;
@@ -718,7 +718,7 @@ svg { display: block; }
 .kcol-head { display: flex; align-items: center; gap: 8px; padding: 4px 6px 10px; }
 .kcol-head .k-dot { width: 11px; height: 11px; border-radius: 4px; flex: none; }
 .kcol-head h4 { font-size: 14.5px; flex: 1; line-height: 1.25; }
-.kcol-head .k-count { font-family: var(--font-disp); font-size: 13px; font-weight: 600; background: #fff; border: 1px solid var(--line); border-radius: 99px; min-width: 25px; height: 25px; display: grid; place-items: center; padding: 0 7px; color: var(--ink-2); }
+.kcol-head .k-count { font-family: var(--font-disp); font-size: 13px; font-weight: 600; background: var(--surface-2); border: 1px solid var(--line); border-radius: 99px; min-width: 25px; height: 25px; display: grid; place-items: center; padding: 0 7px; color: var(--ink-2); }
 .kcol[data-status="pending"] .k-dot { background: #e8a13a; }
 .kcol[data-status="preparing"] .k-dot { background: #3b82f6; }
 .kcol[data-status="ready"] .k-dot { background: #22a04d; }
@@ -728,7 +728,7 @@ svg { display: block; }
 .kcards { display: flex; flex-direction: column; gap: 9px; flex: 1; min-height: 60px; padding: 2px; }
 .kcard {
   position: relative;
-  background: #fff; border-radius: 15px;
+  background: var(--surface); border-radius: 15px;
   border: 1.5px solid var(--line);
   border-left: 5px solid var(--kacc, #e8a13a);
   padding: 11px 12px 10px;
@@ -775,7 +775,7 @@ svg { display: block; }
 .menu-mgmt-head .seg button { flex: 1 1 auto; white-space: normal; }
 .menu-mgmt-head .btn { flex: 1 1 180px; }
 .menu-mgmt-head .btn { flex: 1; }
-.mm-note { background: var(--gold-soft); border: 1.5px solid #ecd9a4; color: #7c5a0d; border-radius: 13px; padding: 10px 14px; font-size: 13px; margin-bottom: 14px; display: flex; gap: 9px; align-items: flex-start; line-height: 1.45; }
+.mm-note { background: var(--gold-soft); border: 1.5px solid #4a5a2a; color: #e8c87a; border-radius: 13px; padding: 10px 14px; font-size: 13px; margin-bottom: 14px; display: flex; gap: 9px; align-items: flex-start; line-height: 1.45; }
 
 .mm-row {
   display: flex; flex-wrap: wrap; align-items: center; gap: 11px;
@@ -791,12 +791,12 @@ svg { display: block; }
 .mm-status.off { color: var(--bad-deep); }
 .mm-price-wrap { flex: none; display: flex; align-items: center; }
 .mm-price { width: 92px; text-align: right; border: 1.6px solid var(--line); border-radius: 12px; padding: 9px 10px 9px 34px; font-size: 16.5px; font-family: var(--font-disp); font-weight: 600; background: var(--surface-2); min-height: 46px; }
-.mm-price:focus { outline: none; border-color: var(--acc); background: #fff; }
+.mm-price:focus { outline: none; border-color: var(--acc); background: var(--surface-2); }
 .mm-savemark { font-size: 10.5px; color: var(--ok-deep); font-weight: 700; opacity: 0; transition: opacity .2s; }
 .mm-savemark.show { opacity: 1; }
 .mm-row.off .mm-emo { filter: grayscale(1); opacity: .6; }
-.mm-del { border: none; background: none; color: #b67873; width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; flex: none; }
-.mm-del:active { background: #fdecea; }
+.mm-del { border: none; background: none; color: #e08d86; width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; flex: none; }
+.mm-del:active { background: #2b1512; }
 
 .emoji-pick { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
 .emoji-pick button { aspect-ratio: 1; border-radius: 13px; border: 1.6px solid var(--line); background: var(--surface-2); font-size: 24px; display: grid; place-items: center; }
@@ -809,9 +809,9 @@ svg { display: block; }
 .oi-row .oi-name b { display: block; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .oi-row .oi-name small { color: var(--muted); font-size: 12px; }
 .oi-row .oi-qty { display: flex; align-items: center; gap: 5px; }
-.oi-row .oi-qty button { width: 34px; height: 34px; border-radius: 10px; border: 1.4px solid var(--line); background: #fff; font-size: 16px; font-weight: 700; color: var(--ink-2); }
+.oi-row .oi-qty button { width: 34px; height: 34px; border-radius: 10px; border: 1.4px solid var(--line); background: var(--surface-2); font-size: 16px; font-weight: 700; color: var(--ink-2); }
 .oi-row .oi-qty b { min-width: 24px; text-align: center; font-family: var(--font-disp); }
-.oi-row .oi-x { width: 34px; height: 34px; border-radius: 10px; border: none; background: #fdecea; color: var(--bad-deep); font-weight: 700; }
+.oi-row .oi-x { width: 34px; height: 34px; border-radius: 10px; border: none; background: #2b1512; color: var(--bad-deep); font-weight: 700; }
 
 .add-item-row { display: flex; gap: 8px; margin-bottom: 4px; }
 .add-item-row .tsel { flex: 1; min-height: 48px; }
@@ -837,7 +837,7 @@ svg { display: block; }
 .skel { border-radius: 15px; background: linear-gradient(100deg, #e9e6dc 40%, #f4f2ea 50%, #e9e6dc 60%); background-size: 200% 100%; animation: shimmer 1.3s infinite linear; }
 @keyframes shimmer { to { background-position: -200% 0; } }
 
-.err-banner { background: #fdecea; border: 1.5px solid #f3c2ba; color: var(--bad-deep); border-radius: var(--radius); padding: 16px; text-align: center; margin: 10px 0; }
+.err-banner { background: #2b1512; border: 1.5px solid #5a2723; color: var(--bad-deep); border-radius: var(--radius); padding: 16px; text-align: center; margin: 10px 0; }
 .err-banner b { display: block; margin-bottom: 4px; }
 
 /* ═══════════ Toast ═══════════ */
@@ -873,7 +873,7 @@ svg { display: block; }
 /* subtabs บนแถบสีเข้มใน pagehead */
 .pagehead .subtabs { background: rgba(255, 255, 255, .14); border-color: rgba(255, 255, 255, .16); margin-bottom: 0; }
 .pagehead .subtabs button { color: rgba(255, 255, 255, .95); }
-.pagehead .subtabs button.on { background: #fff; color: var(--acc-deep); }
+.pagehead .subtabs button.on { background: var(--surface-2); color: var(--acc-deep); }
 .pagehead .subtabs .badge-n { background: var(--gold); color: #22301f; }
 
 /* สถานะออเดอร์ 4 ปุ่ม → กริด 2×2 กันล้นจอเล็ก */
@@ -898,11 +898,11 @@ svg { display: block; }
    ═══════════════════════════════════════════════════════════ */
 
 /* สีตามบทบาท */
-.view[data-app="vendor"] { --acc: #bd4410; --acc-deep: #9c390d; --acc-soft: #fdeada; --band-a: #571f0c; --band-b: #8f3e11; }
-.view[data-app="vendor"] .seg button.on { color: #b04512; }
-.view[data-app="vendor"] .datebtn .d-ic { background: #fdeada; color: #b04512; }
+.view[data-app="vendor"] { --acc: #10b981; --acc-deep: #34d399; --acc-soft: #122b23; --band-a: #071e16; --band-b: #0b3527; }
+.view[data-app="vendor"] .seg button.on { color: var(--acc-deep); }
+.view[data-app="vendor"] .datebtn .d-ic { background: var(--acc-soft); color: var(--acc-deep); }
 .view[data-app="vendor"] .seg.field-seg button.on { background: var(--acc); }
-.view[data-app="customer"] { --acc: #5046c8; --acc-deep: #3a32a0; --acc-soft: #e9e6fc; --band-a: #2a2560; --band-b: #5143b8; }
+.view[data-app="customer"] { --acc: #10b981; --acc-deep: #34d399; --acc-soft: #122b23; --band-a: #071e16; --band-b: #0b3527; }
 
 
 /* bottombar รองรับ 2–4 ปุ่ม */
@@ -943,12 +943,12 @@ svg { display: block; }
 .role-card b { font-family: var(--font-disp); font-size: 19px; }
 .role-card small { color: var(--muted); font-size: 12.8px; line-height: 1.5; min-height: 3.9em; }
 .role-card .rc-go { margin-top: 6px; font-weight: 700; font-size: 13.5px; }
-.role-card.r-manager { border-top: 5px solid #0d7a4f; }
-.role-card.r-manager .rc-go { color: #0a5f3d; }
+.role-card.r-manager { border-top: 5px solid var(--acc); }
+.role-card.r-manager .rc-go { color: var(--acc-deep); }
 .role-card.r-vendor { border-top: 5px solid #d4571e; }
-.role-card.r-vendor .rc-go { color: #b04512; }
-.role-card.r-customer { border-top: 5px solid #5046c8; }
-.role-card.r-customer .rc-go { color: #3a32a0; }
+.role-card.r-vendor .rc-go { color: var(--acc-deep); }
+.role-card.r-customer { border-top: 5px solid var(--acc); }
+.role-card.r-customer .rc-go { color: var(--acc-deep); }
 .start-foot { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 18px; }
 
 /* ── การ์ดตลาด ── */
@@ -972,14 +972,14 @@ svg { display: block; }
 .mk-card .mkc-tx small { display: block; color: var(--muted); font-size: 12.5px; margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .mk-card .mkc-meta { display: block; font-size: 12px; color: var(--ink-2); margin-top: 3px; }
 .mk-card.mk-add { border-style: dashed; align-items: center; }
-.mk-card.mk-add .mkc-emo { background: var(--gold-soft); color: #8a6410; font-weight: 700; }
+.mk-card.mk-add .mkc-emo { background: var(--gold-soft); color: #e8a13a; font-weight: 700; }
 
 .open-badge {
   flex: none; font-size: 11.5px; font-weight: 700; white-space: nowrap;
   padding: 6px 11px; border-radius: 999px;
 }
-.open-badge.on { background: #e5f5ea; color: var(--ok-deep); border: 1.5px solid #bce3c8; }
-.open-badge.off { background: #f1f0ec; color: var(--muted); border: 1.5px solid #d8d8d0; }
+.open-badge.on { background: #10271d; color: var(--ok-deep); border: 1.5px solid #1f4a34; }
+.open-badge.off { background: #202825; color: var(--muted); border: 1.5px solid #33403a; }
 
 /* ── แถวร้านค้า (manager) ── */
 .msh-row {
@@ -995,12 +995,12 @@ svg { display: block; }
 .msh-contacts span { font-size: 11.8px; color: var(--ink-2); background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 99px; padding: 3px 9px; white-space: nowrap; }
 .lot-tag {
   display: inline-block; font-size: 11px; font-weight: 700;
-  background: var(--ink); color: #fff; border-radius: 7px;
+  background: var(--acc-soft); color: var(--acc-deep); border-radius: 7px;
   padding: 2px 7px; vertical-align: 2px; margin-left: 4px;
 }
 .msh-acts { display: flex; flex-direction: column; gap: 7px; }
 .msh-acts .icbtn { width: 38px; height: 38px; }
-.msh-del { color: #b67873; }
+.msh-del { color: #e08d86; }
 
 /* ── การ์ดตั้งค่า ── */
 .set-card {
@@ -1015,15 +1015,15 @@ svg { display: block; }
 .lay-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--surface-2); border: 1.5px solid var(--line); border-radius: 13px; padding: 9px 11px; margin-bottom: 9px; }
 .lay-badge {
   width: 38px; height: 38px; border-radius: 11px; flex: none;
-  background: var(--ink); color: #fff; display: grid; place-items: center;
+  background: var(--acc-soft); color: var(--acc-deep); display: grid; place-items: center;
   font-family: var(--font-disp); font-weight: 600; font-size: 17px;
 }
 .lay-count { display: flex; align-items: center; gap: 6px; flex: none; }
-.lay-count button { width: 38px; height: 42px; border-radius: 11px; border: 1.5px solid var(--line); background: #fff; font-size: 19px; font-weight: 700; color: var(--ink-2); }
+.lay-count button { width: 38px; height: 42px; border-radius: 11px; border: 1.5px solid var(--line); background: var(--surface-2); font-size: 19px; font-weight: 700; color: var(--ink-2); }
 .lay-count b { font-size: 17px; min-width: 26px; text-align: center; }
 .lay-count small { color: var(--muted); font-size: 11.5px; }
 .lay-row .lay-rent { min-height: 44px; }
-.lay-del { color: #b67873; }
+.lay-del { color: #e08d86; }
 
 /* ── เลือกร้าน (vendor) ── */
 .vsp-group { margin-bottom: 16px; }
@@ -1059,7 +1059,7 @@ svg { display: block; }
 
 /* ── ป้ายออเดอร์จากแอปบนคิวครัว ── */
 .kcard .kc-src {
-  font-size: 10.5px; font-weight: 700; background: #e9e6fc; color: #3a32a0;
+  font-size: 10.5px; font-weight: 700; background: #122b23; color: #34d399;
   border: 1px solid #cdc6f2; padding: 2px 7px; border-radius: 99px; margin-left: 6px;
 }
 .kcard.from-app { border-left-style: double; border-left-width: 8px; }
@@ -1110,8 +1110,8 @@ svg { display: block; }
 .sec-title { font-size: 17.5px; margin: 4px 2px 12px; }
 
 .notice-banner { border-radius: 13px; padding: 12px 14px; font-size: 13.8px; margin-bottom: 14px; border: 1.5px solid; }
-.notice-banner.warn { background: #fdf1d7; color: #7c5a0d; border-color: #ecd9a4; }
-.notice-banner.ok { background: #e5f5ea; color: var(--ok-deep); border-color: #bce3c8; }
+.notice-banner.warn { background: #241d0e; color: #e8c87a; border-color: #4a5a2a; }
+.notice-banner.ok { background: #10271d; color: var(--ok-deep); border-color: #1f4a34; }
 
 /* ── ลูกค้า: ออเดอร์ของฉัน + ไทม์ไลน์ ── */
 .myo-card {
@@ -1130,21 +1130,21 @@ svg { display: block; }
 .myo-foot b { font-size: 19px; color: var(--acc-deep); }
 
 .st-chip { flex: none; font-size: 11.8px; font-weight: 700; padding: 6px 11px; border-radius: 999px; white-space: nowrap; }
-.st-pending { background: #fdf1d7; color: #7a5a15; border: 1.5px solid #ecd9a4; }
-.st-preparing { background: #e3edfd; color: #1a5fb4; border: 1.5px solid #c3d7f5; }
-.st-ready { background: #e5f5ea; color: var(--ok-deep); border: 1.5px solid #bce3c8; }
-.st-completed { background: #f1f0ec; color: var(--muted); border: 1.5px solid #d8d8d0; }
+.st-pending { background: #241d0e; color: #e8c87a; border: 1.5px solid #4a5a2a; }
+.st-preparing { background: #16233a; color: #7db3f7; border: 1.5px solid #2a3f5f; }
+.st-ready { background: #10271d; color: var(--ok-deep); border: 1.5px solid #1f4a34; }
+.st-completed { background: #202825; color: var(--muted); border: 1.5px solid #33403a; }
 
 .ev-track { position: relative; padding-left: 4px; margin-top: 10px; }
 .ev-track.mini { margin-top: 12px; border-top: 1px dashed var(--line); padding-top: 12px; }
 .ev-node { position: relative; display: flex; gap: 11px; padding: 0 0 13px 0; }
 .ev-node::before { content: ''; position: absolute; left: 7px; top: 16px; bottom: 0; width: 2px; background: var(--line); }
 .ev-node:last-child::before { display: none; }
-.ev-dot { width: 16px; height: 16px; border-radius: 50%; flex: none; margin-top: 1px; background: #cfcabc; border: 3px solid #fff; box-shadow: 0 0 0 2px #cfcabc; }
-.ev-node.done .ev-dot { background: var(--ok); box-shadow: 0 0 0 2px #bce3c8; }
-.ev-node.now .ev-dot { background: var(--gold); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 35%, #fff); }
+.ev-dot { width: 16px; height: 16px; border-radius: 50%; flex: none; margin-top: 1px; background: #3a4a43; border: 3px solid var(--surface); box-shadow: 0 0 0 2px #3a4a43; }
+.ev-node.done .ev-dot { background: var(--ok); box-shadow: 0 0 0 2px #1f4a34; }
+.ev-node.now .ev-dot { background: var(--gold); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 35%, var(--surface)); }
 .ev-tx b { display: block; font-size: 13.5px; line-height: 1.3; }
-.ev-node.now .ev-tx b { color: #8a6410; }
+.ev-node.now .ev-tx b { color: #e8c87a; }
 .ev-tx small { color: var(--muted); font-size: 11.8px; }
 
 /* ปุ่มเปลี่ยนบทบาทใน sidebar */
@@ -1212,7 +1212,7 @@ svg { display: block; }
 .login-demo b { font-size: 11.5px; color: var(--muted); display: block; margin-bottom: 6px; }
 .demo-accounts { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 .demo-accounts code {
-  font-size: 11px; background: #fff; border: 1px solid var(--line); border-radius: 7px;
+  font-size: 11px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 7px;
   padding: 3px 7px; color: var(--ink-2); font-family: var(--font-disp);
 }
 
@@ -1236,8 +1236,8 @@ svg { display: block; }
 .su-tx b { display: block; font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .su-tx small { display: block; font-size: 11px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .su-out {
-  flex: none; width: 32px; height: 32px; border-radius: 10px; border: 1.4px solid #f3c2ba;
-  background: #fdecea; color: var(--bad-deep); font-size: 14px; cursor: pointer;
+  flex: none; width: 32px; height: 32px; border-radius: 10px; border: 1.4px solid #5a2723;
+  background: #2b1512; color: var(--bad-deep); font-size: 14px; cursor: pointer;
 }
 .su-out:active { transform: scale(.94); }
 
@@ -1257,10 +1257,10 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
 .stat-card small { display: block; font-size: 11.5px; font-weight: 700; color: var(--muted); line-height: 1.25; }
 .stat-card b { display: block; font-family: var(--font-disp); font-size: clamp(17px, 3.4vw, 24px); margin-top: 3px; white-space: nowrap; }
 .stat-card span { display: block; font-size: 11px; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.stat-card.gold { background: linear-gradient(140deg, #fffdf6, #fdf4dc); border-color: #ecd9a4; }
-.stat-card.gold b { color: #7c5a0d; }
+.stat-card.gold { background: linear-gradient(140deg, #22301c, #1a2618); border-color: #4a5a2a; }
+.stat-card.gold b { color: #e8c87a; }
 .stat-card.ppl { background: linear-gradient(140deg, #f8fbff, #eef5fd); border-color: #c9ddf3; }
-.stat-card.ppl b { color: #1a5fb4; }
+.stat-card.ppl b { color: #7db3f7; }
 @media (max-width: 900px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
 
 .panel { background: var(--surface); border: 1.6px solid var(--line); border-radius: 18px; padding: 14px; margin-bottom: 14px; min-width: 0; }
@@ -1287,9 +1287,9 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
   display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 700;
   border-radius: 999px; padding: 3px 9px; white-space: nowrap;
 }
-.role-tag.rt-admin { background: #fdecea; color: var(--bad-deep); }
-.role-tag.rt-manager { background: var(--gold-soft); color: #7c5a0d; }
-.role-tag.rt-vendor { background: #e2eefc; color: #1a5fb4; }
+.role-tag.rt-admin { background: #2b1512; color: var(--bad-deep); }
+.role-tag.rt-manager { background: var(--gold-soft); color: #e8c87a; }
+.role-tag.rt-vendor { background: #122b23; color: #34d399; }
 .role-tag.rt-customer { background: #e7f4ec; color: var(--ok-deep); }
 .row-actions { display: flex; gap: 6px; justify-content: flex-end; white-space: nowrap; }
 
@@ -1328,7 +1328,7 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
   display: inline-block; margin-left: 6px; padding: 1px 7px;
   font-size: 10.5px; font-weight: 600; line-height: 1.5;
   border-radius: 99px; background: rgba(201, 151, 46, .16);
-  color: #8a6410; border: 1px solid rgba(201, 151, 46, .35);
+  color: #e8a13a; border: 1px solid rgba(201, 151, 46, .35);
   vertical-align: 1px; max-width: 90px; overflow: hidden;
   text-overflow: ellipsis; white-space: nowrap;
 }
@@ -1363,7 +1363,7 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
 #lock-screen {
   position: fixed; inset: 0; z-index: 9999;
   display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(160deg, var(--band-a), var(--band-b) 60%, #0d7a4f);
+  background: linear-gradient(160deg, var(--band-a), var(--band-b) 60%, #0d5c40);
   padding: 22px;
 }
 #lock-screen[hidden] { display: none; }
@@ -1382,7 +1382,7 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
   border-radius: var(--radius-sm); border: 1.5px solid var(--line);
   background: var(--surface-2);
 }
-#lock-input:focus { outline: none; border-color: var(--acc); background: #fff; }
+#lock-input:focus { outline: none; border-color: var(--acc); background: var(--surface-2); }
 .lock-hint { min-height: 18px; font-size: 12.5px; color: var(--bad); margin-top: 10px; }
 .lock-card .btn { margin-top: 8px; }
 
@@ -1414,7 +1414,7 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
 /* ── ปุ่มสลับภาษา (ไทย/EN) — พื้นสว่างเป็นค่าเริ่มต้น ── */
 .lang-switch {
   display: inline-flex; gap: 4px; padding: 4px;
-  background: #eceada; border: 1px solid var(--line);
+  background: #101915; border: 1px solid var(--line);
   border-radius: 999px; margin-top: 12px;
 }
 .lang-switch button {
@@ -1430,7 +1430,7 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
   margin: 10px 0 0; background: rgba(255, 255, 255, .14); border-color: rgba(255, 255, 255, .22);
 }
 .side-foot .lang-switch button { color: rgba(255, 255, 255, .95); }
-.side-foot .lang-switch button.on { background: #fff; color: #0a5f3d; }
+.side-foot .lang-switch button.on { background: var(--gold); color: #22301f; }
 
 /* ── ดาวจำเป็น (*) ใน label ── */
 .req { color: var(--bad); font-weight: 800; margin-right: 2px; }
@@ -1447,8 +1447,8 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
 
 /* ── แบนเนอร์ประกาศตลาด + โหมดแขก ── */
 .notice-banner.ann {
-  background: linear-gradient(135deg, #fff7e2, #fdeecb);
-  border: 1.4px solid #e8cf96; color: #6b4c0e;
+  background: linear-gradient(135deg, #22301c, #1a2618);
+  border: 1.4px solid #4a5a2a; color: #e8c87a;
 }
 .notice-banner.guest {
   background: #eef2fb; border: 1.4px solid #c8d4ef; color: #2c3f6b;
@@ -1463,17 +1463,17 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
 }
 .map-head {
   display: flex; align-items: center; gap: 10px; padding: 12px 14px;
-  background: linear-gradient(135deg, #eef7f0, #e2f2e9);
+  background: linear-gradient(135deg, #122b23, #0e231c);
   border-bottom: 1.4px solid var(--line);
 }
 .map-tx { min-width: 0; flex: 1; }
 .map-tx b { display: block; font-size: 14.5px; color: var(--acc-deep); }
 .map-tx small {
-  display: block; font-size: 12.5px; color: #44534b; margin-top: 2px;
+  display: block; font-size: 12.5px; color: var(--ink-2); margin-top: 2px;
   overflow-wrap: anywhere; line-height: 1.45;
 }
 .map-open { flex: none; }
-.map-frame { position: relative; height: 210px; background: #dfe8e1; }
+.map-frame { position: relative; height: 210px; background: #12201a; }
 .map-frame.sm { height: 150px; border-radius: 14px; overflow: hidden; margin: 10px 0 4px; border: 1.4px solid var(--line); }
 .map-frame iframe {
   position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
@@ -1483,11 +1483,11 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
   position: absolute; inset: 0; z-index: 0;
   display: grid; place-items: center; text-align: center;
   background:
-    radial-gradient(circle at 30% 30%, rgba(13, 122, 79, .1), transparent 55%),
-    repeating-linear-gradient(45deg, #e7eee8 0 14px, #dfe8e1 14px 28px);
-  color: #35543f; font-weight: 700; font-size: 14px; padding: 10px;
+    radial-gradient(circle at 30% 30%, rgba(16, 185, 129, .14), transparent 55%),
+    repeating-linear-gradient(45deg, #16241e 0 14px, #121e19 14px 28px);
+  color: #9db3a8; font-weight: 700; font-size: 14px; padding: 10px;
 }
-.map-fallback small { font-weight: 600; color: #3f5749; font-variant-numeric: tabular-nums; }
+.map-fallback small { font-weight: 600; color: #8fa098; font-variant-numeric: tabular-nums; }
 
 /* ── คู่ฟิลด์ (lat/lng) บนจอกว้าง ── */
 .field-row2 { display: grid; grid-template-columns: 1fr; gap: 0; }
@@ -1514,7 +1514,7 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
 .aud-table { width: 100%; border-collapse: collapse; font-size: 12.8px; }
 .aud-table th {
   text-align: left; font-size: 11.5px; text-transform: none; letter-spacing: .3px;
-  color: #44534b; background: var(--surface-2); padding: 9px 10px;
+  color: var(--ink-2); background: var(--surface-2); padding: 9px 10px;
   border-bottom: 1.6px solid var(--line); white-space: nowrap;
 }
 .aud-table td { padding: 9px 10px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
@@ -1536,7 +1536,7 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
   background: transparent; color: var(--bad-deep);
   border: 1.6px solid #f3c2ba;
 }
-.btn.danger-ghost:hover { background: #fdecea; }
+.btn.danger-ghost:hover { background: #2b1512; }
 
 /* ── ปรับแถบแผ่นด้านล่างเมื่อมีหลายแผ่น (แอดมิน 6 แผ่น) ── */
 #bottombar.bb-many .bb-pad { min-height: 56px; font-size: 10.6px; gap: 2px; padding: 4px 2px; }
@@ -1560,7 +1560,7 @@ p.hint { font-size: 12px; color: var(--muted); margin: -4px 0 12px; line-height:
 /* คอนทราสต์: hint/ตัวเลขบนพื้นสีเข้ม */
 .metric .m-sub { color: #3d4a43; }
 .st-chip { box-shadow: 0 2px 6px rgba(30, 43, 37, .1); }
-.mc-price { color: #0a5f3d; }
+.mc-price { color: var(--acc-deep); }
 /* สถานะออเดอร์ (สมาชิก/แขก) ให้อ่านชัดบนพื้นเข้ม */
 .open-badge.off { color: #5c2620; background: #fbe3df; }
 /* หน้าจอเล็กมาก: ลดขนาดหัวเรื่องกับช่องกรอกให้พอดี */
@@ -1620,7 +1620,7 @@ body { touch-action: manipulation; }
 .ro-card {
   display: flex; align-items: center; gap: 13px; width: 100%; text-align: left;
   padding: 14px 16px; border-radius: 16px; cursor: pointer;
-  background: linear-gradient(135deg, #fffdf6, #f2f8f2); border: 1.8px solid var(--line);
+  background: linear-gradient(135deg, #16241d, #122019); border: 1.8px solid var(--line);
   color: var(--ink); font-family: inherit;
   transition: border-color .15s, box-shadow .15s, transform .1s;
 }
@@ -1640,8 +1640,8 @@ body { touch-action: manipulation; }
 .vstat .vs-tx b { display: block; font-size: 14.5px; }
 .vstat .vs-tx small { display: block; font-size: 12.5px; color: var(--muted); margin-top: 2px; line-height: 1.45; }
 .vstat .vs-date { opacity: .75; }
-.vstat.pending { border-color: #e0b23c; background: #fdf8ec; }
-.vstat.denied { border-color: #d98a8a; background: #fdf0f0; }
+.vstat.pending { border-color: #8a6d1f; background: #2a2210; }
+.vstat.denied { border-color: #8a3a3a; background: #2a1515; }
 
 /* ขั้นตอนสมัคร */
 .apply-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin-top: 16px; }
@@ -1653,7 +1653,7 @@ body { touch-action: manipulation; }
 /* ฟอร์มสมัคร */
 .as-sec { font-size: 13px; font-weight: 700; color: var(--acc); margin: 16px 0 8px; letter-spacing: .2px; }
 .as-sec:first-child { margin-top: 0; }
-.apply-card { background: #fff; border: 1.6px solid var(--line); border-radius: 16px; padding: 16px 15px; margin-top: 14px; }
+.apply-card { background: var(--surface); border: 1.6px solid var(--line); border-radius: 16px; padding: 16px 15px; margin-top: 14px; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
 /* เลือกล็อค */
@@ -1662,11 +1662,11 @@ body { touch-action: manipulation; }
 .lp-cell b { display: block; font-size: 14px; }
 .lp-cell small { display: block; font-size: 10.5px; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .lp-cell.free:hover { border-color: var(--acc); }
-.lp-cell.free.sel { border-color: var(--acc); background: #e2f0e8; box-shadow: 0 0 0 2px rgba(28, 120, 84, .18); }
+.lp-cell.free.sel { border-color: var(--acc); background: #10271d; box-shadow: 0 0 0 2px rgba(52, 211, 153, .25); }
 .lp-cell.taken { opacity: .55; cursor: not-allowed; background: #f3f0ea; }
 
 /* การ์ดใบสมัคร (ผจก./แอดมิน) */
-.app-card { border: 1.6px solid var(--line); border-radius: 15px; background: #fff; padding: 13px 14px; margin-bottom: 10px; }
+.app-card { border: 1.6px solid var(--line); border-radius: 15px; background: var(--surface); padding: 13px 14px; margin-bottom: 10px; }
 .app-card.pending { border-color: #e0b23c; }
 .app-card.denied { opacity: .88; }
 .ac-head { display: flex; gap: 10px; align-items: flex-start; }
@@ -1677,14 +1677,14 @@ body { touch-action: manipulation; }
 .ac-title .ac-desc { font-style: italic; }
 .ac-st { flex: none; font-size: 11.5px; font-weight: 700; padding: 4px 9px; border-radius: 999px; white-space: nowrap; }
 .ac-st.pending { background: #fdf3d8; color: #7c5b12; border: 1px solid #e5c96e; }
-.ac-st.approved { background: #e2f0e8; color: #1c6a4a; border: 1px solid #9ecdb5; }
+.ac-st.approved { background: #10271d; color: #6ee7b7; border: 1px solid #1f4a34; }
 .ac-st.denied { background: #fdeaea; color: #8f3232; border: 1px solid #dca9a9; }
 .ac-actions { display: flex; gap: 8px; margin-top: 11px; align-items: center; }
 .ac-deny { margin-top: 9px; font-size: 12.5px; color: #8f3232; background: #fdf3f3; border-radius: 9px; padding: 8px 10px; }
 
 /* badge ตลาดกลางวัน/กลางคืน */
 .mtype { display: inline-block; font-size: 10.5px; font-weight: 700; padding: 2px 7px; border-radius: 999px; vertical-align: middle; margin-left: 4px; }
-.mtype.day { background: #fff3d6; color: #8a6410; border: 1px solid #e8cf8e; }
+.mtype.day { background: #241d0e; color: #e8c87a; border: 1px solid #4a5a2a; }
 .mtype.night { background: #e8ecfa; color: #3d4a8f; border: 1px solid #b3bde0; }
 .mk-filter { margin-bottom: 12px; }
 .mk-card.va { flex-wrap: wrap; }
@@ -1693,7 +1693,7 @@ body { touch-action: manipulation; }
 /* สลับตลาด (ร้านค้าหลายตลาด) */
 .vsp-row { display: flex; align-items: center; gap: 11px; width: 100%; text-align: left; padding: 12px 13px; border-radius: 13px; border: 1.6px solid var(--line); background: var(--surface-2); cursor: pointer; font-family: inherit; margin-bottom: 8px; }
 .vsp-row:hover { border-color: var(--acc); }
-.vsp-row.on { border-color: var(--acc); background: #e2f0e8; }
+.vsp-row.on { border-color: var(--acc); background: #10271d; }
 .vsp-emo { font-size: 22px; }
 .vsp-tx { flex: 1; min-width: 0; }
 .vsp-tx b { display: block; font-size: 14.5px; }
@@ -1742,7 +1742,7 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
 .myo-track code { background: var(--surface-2); border: 1px solid var(--line); border-radius: 7px; padding: 2px 7px; font-size: 11.5px; letter-spacing: .5px; color: var(--ink); font-family: var(--font-disp); }
 .myo-track .linklike { font-size: 11.5px; padding: 2px 6px; }
 /* คิวครัว: จุดออเดอร์ใหม่ (< 2 นาที) */
-.kc-fresh { color: #b04512; background: #fdeada; border: 1px solid #f3cdb0; font-size: 10.5px; font-weight: 800; border-radius: 99px; padding: 1px 7px; animation: freshPulse 1.6s ease-in-out infinite; }
+.kc-fresh { color: #ffb37a; background: #2a1f14; border: 1px solid #5a3a1e; font-size: 10.5px; font-weight: 800; border-radius: 99px; padding: 1px 7px; animation: freshPulse 1.6s ease-in-out infinite; }
 @keyframes freshPulse { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
 /* ป้ายสต็อกเหลือน้อยบนแท็บเมนู (ทอง) */
 .subtabs .badge-n.low-stock { background: var(--gold); color: #22301f; }
@@ -1773,6 +1773,50 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
 /* ── ปุ่มติดตั้งแอป (หน้าแรก · แสดงเมื่อเบราว์เซอร์พร้อม) ── */
 .start-install { margin-top: 14px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
 .start-install small { color: var(--muted); font-size: 12px; }
+
+/* ═══════════ v7: portfolio-parity — สถิติ/กราฟ/ฮีโร่/แบนเนอร์ ═══════════ */
+.vstats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.qstat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 10px 4px; text-align: center; }
+.qstat b { display: block; font-family: var(--font-disp); font-weight: 700; font-size: 19px; color: var(--ink); }
+.qstat.gold b { color: var(--gold-deep); }
+.qstat span { font-size: 11px; color: var(--muted); }
+.bars { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 12px 10px; margin: 12px 0; }
+.bars.full { grid-column: 1 / -1; }
+.bars h4 { margin: 0 0 8px; font-size: 13.5px; }
+.bars-row { display: flex; align-items: stretch; gap: 4px; }
+.bar { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 3px; }
+.bar b { font-size: 9.5px; font-weight: 700; color: var(--muted); min-height: 13px; }
+.bar i { display: block; width: 72%; max-width: 26px; border-radius: 6px 6px 3px 3px; background: linear-gradient(180deg, var(--acc), #0a5c43); }
+.bar.today i { background: linear-gradient(180deg, var(--gold), #8a5a17); }
+.bar.today b, .bar.today span { color: var(--gold-deep); font-weight: 700; }
+.bar span { font-size: 10.5px; color: var(--muted); }
+.stock-alert { display: flex; gap: 8px; align-items: flex-start; background: rgba(220, 38, 38, .1); border: 1px solid rgba(220, 38, 38, .4); color: #fca5a5; border-radius: 12px; padding: 9px 12px; font-size: 12.5px; margin-bottom: 12px; }
+.expand-banner { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; cursor: pointer; border: 1px solid rgba(232, 161, 58, .45); border-radius: 14px; padding: 11px 12px; margin-bottom: 12px; background: linear-gradient(135deg, #3a2a10, #241a08); color: var(--ink); }
+.eb-ic { font-size: 26px; }
+.eb-tx { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.eb-tx b { font-size: 14px; color: var(--gold-deep); }
+.eb-tx small { font-size: 11.5px; color: var(--muted); }
+.eb-go { font-size: 20px; color: var(--gold-deep); font-weight: 700; }
+/* เมนู: แถบไล่สีตามสินค้า (เหมือนช็อตตัวอย่าง) */
+.menu-card .mc-emo { display: flex; align-items: center; justify-content: center; font-size: 46px; min-height: 86px; border-radius: 12px; margin: 2px 0 6px; background: linear-gradient(135deg, hsl(var(--h, 150), 60%, 38%), hsl(calc(var(--h, 150) + 45), 65%, 25%)); }
+/* ผจก.: ฮีโร่รายได้ + แถบเก็บค่าเช่า */
+.metric.revenue.hero { grid-column: 1 / -1; background: linear-gradient(135deg, #3a2a10, #241a08); border: 1px solid rgba(232, 161, 58, .45); }
+.metric.revenue.hero .m-val.big { font-size: 34px; color: var(--gold-deep); }
+.metric.revenue.hero .m-sub { color: var(--muted); }
+.collect { height: 8px; border-radius: 99px; background: rgba(255, 255, 255, .1); margin-top: 10px; overflow: hidden; }
+.collect i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--acc), var(--gold)); }
+.collect-tx { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+#m-approvals { grid-column: 1 / -1; }
+#m-approvals:empty { display: none; }
+.appr-card { background: var(--surface); border: 1px solid rgba(232, 161, 58, .45); border-radius: 14px; padding: 12px; }
+.appr-head { display: flex; align-items: center; justify-content: space-between; font-size: 13.5px; margin-bottom: 8px; }
+.appr-head .m-link { background: none; border: 0; padding: 4px 2px; color: var(--gold-deep); font-weight: 700; cursor: pointer; font-size: 12.5px; }
+.appr-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-top: 1px dashed var(--line); }
+.appr-row:first-of-type { border-top: 0; }
+.appr-tx { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.appr-tx b { font-size: 13.5px; }
+.appr-tx small { font-size: 11.5px; color: var(--muted); }
+.btn-approve { flex: none; border: 0; cursor: pointer; border-radius: 10px; padding: 8px 14px; font-size: 13px; font-weight: 700; background: linear-gradient(180deg, var(--acc), #0a7a56); color: #fff; }
 
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ9NHDR48H"></script>
@@ -1806,7 +1850,7 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
       <div class="lang-switch" id="lang-switch-side" role="group" aria-label="ภาษา / Language">
         <button type="button" data-lang="th">ไทย</button><button type="button" data-lang="en">EN</button>
       </div>
-      <p class="ver">TalatSuite v5.6 · โหมดออฟไลน์</p>
+      <p class="ver">TalatSuite v7.0 · โหมดออฟไลน์</p>
     </div>
   </aside>
 
@@ -2168,19 +2212,19 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
       market_id: 1, lot_code: 'A5', name: 'พิซซ่าอิฐร้อน บี', category: 'food',
       description: 'พิซซ่าอิฐเผา ชีสเยิ้ม โดว์หมัก 48 ชม. ของสดทำวันต่อวัน',
       phone: '089-111-2223', email: 'satohot.pizza@gmail.com', line_id: '@pizzabee',
-      whatsapp: '66891112223', facebook: 'pizzabee.th', emoji: '🍕', is_open: true,
+      whatsapp: '66891112223', facebook: 'pizzabee.th', emoji: '🍕', is_open: true, rating: 4.8,
     });
     var SH2 = addShop({
       market_id: 1, lot_code: 'A3', name: 'ชาไทยเจ๊แอ๊ด', category: 'food',
       description: 'ชาไทยเข้มข้นหอมใบเตย ชงสดทุกแก้ว รับออเดอร์ล่วงหน้าได้',
       phone: '086-222-3344', email: 'cha.aed@gmail.com', line_id: '@chaaid',
-      whatsapp: '66862223344', facebook: '', emoji: '🧋', is_open: true,
+      whatsapp: '66862223344', facebook: '', emoji: '🧋', is_open: true, rating: 4.9,
     });
     addShop({
       market_id: 2, lot_code: 'N3', name: 'สเต็กเตาถ่านพี่บอส', category: 'food',
       description: 'สเต็กเนื้อชิ้นหนา ย่างเตาถ่าน ซอสสูตรลับของพี่บอส',
       phone: '092-333-4455', email: '', line_id: '@bosssteak',
-      whatsapp: '', facebook: '', emoji: '🥩', is_open: true,
+      whatsapp: '', facebook: '', emoji: '🥩', is_open: true, rating: 4.7,
     });
 
     /* ── เมนู 9 รายการ ── */
@@ -2212,15 +2256,24 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
       { shop: SH1, customer: 'น้องแพร', note: 'ห่อกลับบ้าน', status: 'ready', mins: 4, items: [[mHawaii, 1], [mFries, 1]] },
       { shop: SH1, customer: 'คุณวิทยา', note: '', status: 'completed', mins: 42, items: [[mSeafood, 1]] },
       { shop: SH2, customer: 'น้องมะลิ', note: 'หวานน้อย', status: 'pending', mins: 3, items: [[mThaiTea, 1], [mGreen, 1]] },
+      /* v7: ออเดอร์ย้อนหลัง 6 วัน — เติมกราฟยอดขาย 7 วัน */
+      { shop: SH1, customer: 'คุณมานะ', note: '', status: 'completed', days: 1, mins: 320, items: [[mHawaii, 2]] },
+      { shop: SH2, customer: 'น้องก้อย', note: '', status: 'completed', days: 1, mins: 400, items: [[mThaiTea, 3]] },
+      { shop: SH1, customer: 'พี่แดง', note: '', status: 'completed', days: 2, mins: 280, items: [[mSeafood, 1], [mFries, 1]] },
+      { shop: SH1, customer: 'คุณสมศรี', note: '', status: 'completed', days: 3, mins: 350, items: [[mHawaii, 1], [mSeafood, 1]] },
+      { shop: SH2, customer: 'น้องฟ้า', note: '', status: 'completed', days: 3, mins: 420, items: [[mGreen, 2]] },
+      { shop: SH1, customer: 'ลุงหมู', note: '', status: 'completed', days: 4, mins: 300, items: [[mHawaii, 1]] },
+      { shop: SH2, customer: 'ป้าเล็ก', note: '', status: 'completed', days: 5, mins: 380, items: [[mThaiTea, 2], [mGreen, 1]] },
+      { shop: SH1, customer: 'คุณโจ', note: '', status: 'completed', days: 6, mins: 310, items: [[mSeafood, 2]] },
     ];
     demoOrders.forEach(function (o) {
-      var when = new Date(t0 - o.mins * 60000).toISOString();
+      var when = new Date(t0 - ((o.days || 0) * 1440 + o.mins) * 60000).toISOString();
       var items = o.items.map(function (it) {
         return { menu_item_id: it[0].id, name: it[0].name, emoji: it[0].emoji, unit_price: Number(it[0].price), qty: it[1] };
       });
       var flow = ORDER_STATUSES.slice(0, ORDER_STATUSES.indexOf(o.status) + 1);
       var events = flow.map(function (st, kk) {
-        return { status: st, text: EVENT_TEXT[st], created_at: new Date(t0 - (o.mins - kk * 2) * 60000).toISOString() };
+        return { status: st, text: EVENT_TEXT[st], created_at: new Date(t0 - ((o.days || 0) * 1440 + o.mins - kk * 2) * 60000).toISOString() };
       });
       db.orders.push({
         id: db.seq.order++, shop_id: o.shop, customer_id: '', customer_user_id: null, customer_name: o.customer,
@@ -2285,6 +2338,20 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
       if (o.customer_name === 'คุณอารยา') { o.customer_user_id = U_ARAYA.id; o.customer_id = 'u:' + U_ARAYA.id; }
       if (o.customer_name === 'น้องมะลิ') { o.customer_user_id = U_MALI.id; o.customer_id = 'u:' + U_MALI.id; }
     });
+    /* v7: ใบสมัครร้านค้างพิจารณา — โชว์การ์ดอนุมัติบนหน้าแรกผจก. */
+    var U_PAEDAENG = addUser('paedaeng', 'vendor123', 'vendor', 'ป้าแดง · ขนมไทย', { phone: '087-555-1234' });
+    var SHP = addShop({
+      market_id: 1, lot_code: 'B2', name: 'ขนมไทยป้าแดง', category: 'food',
+      description: 'ขนมไทยโบราณ ทำสดทุกเช้า', phone: '087-555-1234', email: 'paedaeng@gmail.com',
+      line_id: '@paedaeng', whatsapp: '', facebook: '', emoji: '\U0001F361', is_open: true,
+      status: 'pending', owner_user_id: U_PAEDAENG.id, deny_reason: '',
+    });
+    U_PAEDAENG.shop_id = SHP;
+    db.applications.push({
+      id: db.seq.app++, kind: 'shop', user_id: U_PAEDAENG.id, market_id: 1, shop_id: SHP,
+      payload: { shop_name: 'ขนมไทยป้าแดง', category: 'food', lot_code: 'B2' },
+      status: 'pending', deny_reason: '', decided_by: null, decided_at: null, created_at: now,
+    });
     return db;
   }
 
@@ -2313,7 +2380,7 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
       id: s.id, market_id: s.market_id, lot_code: s.lot_code, name: s.name,
       category: s.category, description: s.description, phone: s.phone, email: s.email,
       line_id: s.line_id, whatsapp: s.whatsapp, facebook: s.facebook, emoji: s.emoji,
-      is_open: s.is_open, created_at: s.created_at,
+      is_open: s.is_open, created_at: s.created_at, rating: s.rating == null ? null : Number(s.rating),
       status: s.status || 'approved', deny_reason: s.deny_reason || '',
       owner_user_id: s.owner_user_id == null ? null : s.owner_user_id,
     };
@@ -2991,15 +3058,25 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
           if (l.state.payment_status === 'unpaid') occ.unpaid++; else occ.paid++;
         }
       });
+      var series = [];
+      for (var si = 6; si >= 0; si--) {
+        var dStr = new Date(new Date(date + 'T00:00:00Z').getTime() - si * 86400000).toISOString().slice(0, 10);
+        var dt = 0;
+        Object.keys(db.payments).forEach(function (key2) {
+          var p2 = db.payments[key2];
+          if (p2.day === dStr && Number(p2.market_id) === Number(mid)) dt += Number(p2.amount);
+        });
+        series.push({ day: dStr, total: dt });
+      }
       return [200, {
-        date: date, period: period, range: range, lots: lots,
+        date: date, period: period, range: range, lots: lots, series: series,
         metrics: {
           revenue: payRows.reduce(function (s2, p) { return s2 + Number(p.amount); }, 0),
           payment_count: payRows.length,
           total_lots: lots.length,
           occupied: occ.occupied, unpaid: occ.unpaid, paid: occ.paid,
-          shops_open: db.shops.filter(function (sh2) { return Number(sh2.market_id) === Number(mid) && sh2.is_open; }).length,
-          shops_total: db.shops.filter(function (sh2) { return Number(sh2.market_id) === Number(mid); }).length,
+          shops_open: db.shops.filter(function (sh2) { return Number(sh2.market_id) === Number(mid) && (sh2.status || 'approved') === 'approved' && sh2.is_open; }).length,
+          shops_total: db.shops.filter(function (sh2) { return Number(sh2.market_id) === Number(mid) && (sh2.status || 'approved') === 'approved'; }).length,
         },
       }];
     }
@@ -3083,9 +3160,19 @@ a.map-frame.map-frame-link:active { transform: scale(.99); }
     if (path === '/api/shops' && method === 'GET') {
       var midF = num(q.market_id);
       var openOnly = q.open_only === '1';
+      var vu = currentUser(token);
       var list2 = db.shops.filter(function (s) {
         if (midF && s.market_id !== midF) return false;
         if (openOnly && !s.is_open) return false;
+        /* v7: เหมือนเซิร์ฟเวอร์ — ทั่วไปเห็นเฉพาะร้านอนุมัติแล้ว */
+        var st = s.status || 'approved';
+        if (!vu || (vu.role !== 'admin' && vu.role !== 'vendor' && vu.role !== 'manager')) {
+          if (st !== 'approved') return false;
+        } else if (vu.role === 'vendor') {
+          if (!(st === 'approved' || s.owner_user_id === vu.id || s.id === vu.shop_id)) return false;
+        } else if (vu.role === 'manager' && vu.market_id) {
+          if (!(st === 'approved' || s.market_id === vu.market_id)) return false;
+        }
         return true;
       }).map(function (s) {
         var mk2 = findMarket(s.market_id) || {};
@@ -5949,7 +6036,7 @@ function setupPWA() {
   let sw = null;
   try { sw = ('serviceWorker' in navigator) ? navigator.serviceWorker : null; } catch (e) { sw = null; }
   if (sw) {
-    try { sw.register('/sw.js').catch(() => {}); } catch (e) {}
+    try { Promise.resolve() /* single-file: SW skipped (no sw.js in this bundle) */.catch(() => {}); } catch (e) {}
   }
   /* เบราว์เซอร์พร้อมให้ติดตั้ง → เก็บ event ไว้ให้ปุ่ม "ติดตั้งแอป" เรียก */
   window.addEventListener('beforeinstallprompt', (e) => {
@@ -6778,6 +6865,42 @@ async function loadMarket() {
   }
 }
 
+/* v7: พรีวิวใบสมัครรอพิจารณาบนหน้าแรกผจก. */
+async function loadApprovalsPreview() {
+  const box = $('#m-approvals');
+  if (!box || state.role !== 'manager' || state.manager.tab !== 'home') return;
+  let data = null;
+  try {
+    if (state.user && state.user.role === 'admin') {
+      const all = await api('/api/admin/applications');
+      data = { applications: (all.applications || []).filter((a) => a.kind === 'shop' && Number(a.market_id) === Number(state.manager.marketId)) };
+    } else {
+      data = await api('/api/manager/applications');
+    }
+  } catch (e) { return; }
+  if (!box.isConnected) return;
+  const apps = (data.applications || []).filter((a) => a.status === 'pending');
+  if (!apps.length) { box.innerHTML = ''; return; }
+  box.innerHTML = `
+    <div class="appr-card">
+      <div class="appr-head"><span>⏳ <b>รอ ${apps.length} คำขออนุมัติ</b></span><button class="m-link" id="appr-all" type="button">ดูทั้งหมด</button></div>
+      ${apps.slice(0, 2).map((a) => `
+        <div class="appr-row">
+          <div class="appr-tx"><b>${esc(a.kind === 'market' ? 'ตลาดใหม่: ' + (a.market_name || '—') : 'ร้านค้าใหม่: ' + (a.shop_name || '—'))}</b><small>${a.lot_code ? 'ล็อค ' + esc(a.lot_code) + ' · ' : ''}${esc(timeAgo(a.created_at))}</small></div>
+          <button class="btn-approve" data-appr-ok="${a.id}" type="button">อนุมัติ</button>
+        </div>`).join('')}
+    </div>`;
+  box.querySelector('#appr-all').addEventListener('click', () => switchManagerTab('apps'));
+  box.querySelectorAll('[data-appr-ok]').forEach((b) => b.addEventListener('click', async () => {
+    b.disabled = true;
+    try {
+      await api(`/api/applications/${b.dataset.apprOk}/approve`, { method: 'POST', body: {} });
+      toast('อนุมัติเรียบร้อย ✅', 'ok');
+    } catch (e) { toast(e.message, 'err'); b.disabled = false; return; }
+    loadApprovalsPreview();
+  }));
+}
+
 function rangeLabel(data) {
   const { period, range, date } = data;
   if (period === 'daily') return fmtDateMedium(date);
@@ -6792,13 +6915,35 @@ function renderMarketData() {
   if (!d) return;
   const met = d.metrics;
   const lbl = rangeLabel(d);
+  /* v7: ฮีโร่รายได้ + กราฟ 7 วัน + แถบเก็บค่าเช่า */
+  const paidN = Number(met.paid || 0), occN = Number(met.occupied || 0);
+  const collectPct = occN ? Math.round((paidN / occN) * 100) : 0;
+  const collectBar = occN ? `<div class="collect" title="เก็บค่าเช่าแล้ว ${paidN}/${occN} ล็อค"><i style="width:${collectPct}%"></i></div><div class="collect-tx">เก็บค่าเช่าแล้ว ${paidN}/${occN} ล็อค · ${collectPct}%</div>` : '';
+  const series = Array.isArray(d.series) ? d.series : [];
+  const maxS = Math.max(1, ...series.map((s0) => Number(s0.total || 0)));
+  const dwN = ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'];
+  const kLb = (val) => (val >= 1000 ? (Math.round(val / 100) / 10) + 'k' : (val || ''));
+  const revChart = series.length ? `
+    <div class="bars full">
+      <h4>📈 รายได้ค่าเช่า 7 วันล่าสุด</h4>
+      <div class="bars-row">
+        ${series.map((s2, ix) => {
+          const dt = new Date(s2.day + 'T00:00:00Z');
+          const val = Number(s2.total || 0);
+          return `<div class="bar${ix === series.length - 1 ? ' today' : ''}" title="${esc(s2.day)} · ${baht(val)}"><b>${kLb(val)}</b><i style="height:${Math.max(3, Math.round((val / maxS) * 72))}px"></i><span>${dwN[dt.getUTCDay()]}</span></div>`;
+        }).join('')}
+      </div>
+    </div>` : '';
 
   $('#m-metrics').innerHTML = `
-    <div class="metric revenue">
-      <div class="m-label"><span class="m-ic">${IC.money}</span>รายได้รวม</div>
-      <div class="m-val">${baht(met.revenue)}</div>
-      <div class="m-sub">${met.payment_count} รายการชำระ · ${esc(lbl)}<button class="m-link" id="rev-history" type="button">ดูประวัติ</button></div>
+    <div class="metric revenue hero">
+      <div class="m-label"><span class="m-ic">${IC.money}</span>รายได้รวม · ${esc(lbl)}</div>
+      <div class="m-val big">${baht(met.revenue)}</div>
+      <div class="m-sub">${met.payment_count} รายการชำระ<button class="m-link" id="rev-history" type="button">ดูประวัติ</button></div>
+      ${collectBar}
     </div>
+    ${revChart}
+    <div id="m-approvals"></div>
     <div class="metric total">
       <div class="m-label"><span class="m-ic">${IC.grid}</span>ล็อคทั้งหมด</div>
       <div class="m-val">${met.total_lots}</div>
@@ -6816,6 +6961,7 @@ function renderMarketData() {
     </div>`;
 
   $('#date-label').textContent = fmtDateShort(d.date);
+  loadApprovalsPreview();
 
   /* ── ผังตลาด (แถวไดนามิกตาม layout ของตลาด) ── */
   const rows = {};
@@ -8467,11 +8613,11 @@ function renderVendorPosTab() {
   c.innerHTML = `
     <div class="pos-layout">
       <div class="menu-grid">
-        ${v.menu.map((it) => {
+        ${v.menu.map((it, ix) => {
           const qty = v.cart[it.id] || 0;
           const visual = it.image
             ? `<span class="mc-img"><img src="${esc(it.image)}" alt=""></span>`
-            : `<span class="mc-emo">${esc(it.emoji)}</span>`;
+            : `<span class="mc-emo" style="--h:${(ix * 67) % 360}">${esc(it.emoji)}</span>`;
           return `
           <div class="menu-card ${it.available ? '' : 'off'}" data-id="${it.id}">
             ${it.available ? '' : '<span class="mc-off-tag">สินค้าหมด</span>'}
@@ -8629,6 +8775,41 @@ function renderQueueTab() {
   const c = $('#pos-content');
   if (!c) return;
   const orders = state.vendor.orders;
+  const v = state.vendor;
+  /* v7: สถิติวันนี้ + กราฟ 7 วัน + แจ้งเตือนสต็อก (คำนวณจากข้อมูลจริงของร้าน) */
+  const todayKey = new Date().toDateString();
+  const dayOf = (iso) => { try { return new Date(iso).toDateString(); } catch (e) { return ''; } };
+  const ordersToday = orders.filter((o) => dayOf(o.created_at) === todayKey);
+  const revToday = ordersToday.reduce((sum, o) => sum + Number(o.total || 0), 0);
+  const shopRating = v.shop && v.shop.rating != null ? Number(v.shop.rating) : null;
+  const outStock = (v.menu || []).filter((it) => it.stock === 0 || it.available === false);
+  const dayNames = ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'];
+  const buckets = [];
+  for (let bi = 6; bi >= 0; bi--) {
+    const dd = new Date(); dd.setDate(dd.getDate() - bi);
+    buckets.push({ key: dd.toDateString(), dw: dayNames[dd.getDay()], total: 0, now: bi === 0 });
+  }
+  orders.forEach((o) => {
+    const b = buckets.find((x) => x.key === dayOf(o.created_at));
+    if (b) b.total += Number(o.total || 0);
+  });
+  const maxBucket = Math.max(1, ...buckets.map((b) => b.total));
+  const kLabel = (val) => (val >= 1000 ? (Math.round(val / 100) / 10) + 'k' : (val || ''));
+  const statsTop = `
+    <div class="vstats">
+      <div class="qstat"><b class="num">${ordersToday.length}</b><span>ออเดอร์วันนี้</span></div>
+      <div class="qstat gold"><b class="num">${baht(revToday)}</b><span>ยอดขายวันนี้</span></div>
+      <div class="qstat"><b class="num">${shopRating != null ? shopRating.toFixed(1) + '★' : '–'}</b><span>คะแนนร้าน</span></div>
+    </div>
+    ${outStock.length ? `<div class="stock-alert">⚠️ <span><b>สต็อกหมด:</b> ${outStock.map((it) => esc(it.name)).join(' · ')} — ลูกค้าเห็นป้าย “สินค้าหมด” แล้ว</span></div>` : ''}
+    <button class="expand-banner" data-act="expand" type="button"><span class="eb-ic">🚀</span><span class="eb-tx"><b>ขยายไปตลาดอื่น</b><small>สมัครเปิดสาขาใหม่ในตลาดถัดไป — อนุมัติไวใน 24 ชม.</small></span><span class="eb-go">→</span></button>`;
+  const salesChart = `
+    <div class="bars">
+      <h4>📊 ยอดขาย 7 วันล่าสุด</h4>
+      <div class="bars-row">
+        ${buckets.map((b) => `<div class="bar${b.now ? ' today' : ''}" title="${b.total ? baht(b.total) : 'ไม่มีออเดอร์'}"><b>${kLabel(b.total)}</b><i style="height:${Math.max(3, Math.round((b.total / maxBucket) * 72))}px"></i><span>${b.dw}</span></div>`).join('')}
+      </div>
+    </div>`;
 
   const prevBoard = $('#kanban');
   const prevScroll = prevBoard ? prevBoard.scrollLeft : null;
@@ -8660,6 +8841,7 @@ function renderQueueTab() {
   };
 
   c.innerHTML = `
+    ${statsTop}
     <div class="kanban" id="kanban">
       ${ORDER_STATUSES.map((s) => {
         const list = colOrders(s);
@@ -8672,6 +8854,7 @@ function renderQueueTab() {
         </section>`;
       }).join('')}
     </div>
+    ${salesChart}
     <p class="drag-tip">ลากบัตร (กดค้างแล้วลาก) หรือใช้ปุ่ม ◀ ▶ เพื่อย้ายสถานะ · แตะบัตรเพื่อแก้ไขรายละเอียด · การ์ดที่ลูกค้าสั่งจากแอปมีป้าย 📱</p>`;
 
   if (prevScroll != null && $('#kanban')) $('#kanban').scrollLeft = prevScroll;
@@ -9466,7 +9649,7 @@ async function renderCustomerMarket() {
         <div class="sc-tx">
           <b>${esc(s.name)}</b>
           <small>${esc(CAT_TH[s.category] || s.category)}${s.lot_code ? ' · ล็อค ' + esc(s.lot_code) : ''}</small>
-          <span class="sc-meta">${s.menu_count} รายการในเมนู</span>
+          <span class="sc-meta">${s.rating != null ? `\u2B50 ${s.rating} \u00B7 ` : ``}${s.menu_count} รายการในเมนู</span>
         </div>
         <span class="open-badge ${s.is_open ? 'on' : 'off'}">${s.is_open ? 'เปิดอยู่' : 'ปิดอยู่'}</span>
       </button>`).join('');
@@ -9536,12 +9719,12 @@ async function renderCustomerShop() {
     <h3 class="sec-title">🍕 เมนูของร้าน</h3>
     ${cu.menu.length ? `
     <div class="menu-grid cu">
-      ${cu.menu.map((it) => {
+      ${cu.menu.map((it, ix) => {
         const qty = (cu.carts[cu.shopId] || {})[it.id] || 0;
         const itemOrderable = canOrder && it.available;
         const visual = it.image
           ? `<span class="mc-img"><img src="${esc(it.image)}" alt=""></span>`
-          : `<span class="mc-emo">${esc(it.emoji)}</span>`;
+          : `<span class="mc-emo" style="--h:${(ix * 67) % 360}">${esc(it.emoji)}</span>`;
         return `
         <div class="menu-card cmenu ${it.available ? '' : 'off'}" data-id="${it.id}">
           ${it.available ? '' : '<span class="mc-off-tag">สินค้าหมด</span>'}
@@ -10193,6 +10376,10 @@ document.addEventListener('click', (e) => {
     return;
   }
   if (e.target.closest('#v-expand')) {
+    renderVendorApply({ fromDashboard: true });
+    return;
+  }
+  if (e.target.closest('[data-act="expand"]')) {
     renderVendorApply({ fromDashboard: true });
     return;
   }
