@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TalatSuite — ระบบจัดการตลาด ร้านค้า และออร์เดอร์อาหาร</title>
+<meta name="description" content="TalatSuite: ระบบตลาด 3-in-1 ภาษาไทย — ผู้จัดการตลาดดูรายได้และผังล็อค ร้านค้าใช้ POS คิวครัว ลูกค้าสั่งอาหารจากมือถือ ทดลองเดโมฟรีได้เลย">
+<meta property="og:title" content="TalatSuite — ตลาดของคุณ ในมือถือของลูกค้า">
+<meta property="og:description" content="จัดการตลาด + POS ร้านค้า + ลูกค้าสั่งอาหาร ในระบบเดียว ภาษาไทย ทดลองเดโมฟรี">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og-image.jpg">
+<style>
+:root{--bg:#07120d;--card:#0d2117;--card2:#102619;--line:rgba(232,184,74,.16);--gold:#e8b84a;--green:#2fd08c;--text:#eaf5ee;--muted:#9db8a9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(1200px 600px at 50% -10%,#0e2f1e 0%,var(--bg) 60%) fixed,var(--bg);color:var(--text);font-family:"Noto Sans Thai","Sarabun",Thonburi,Tahoma,system-ui,sans-serif;line-height:1.75}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+nav{position:sticky;top:0;z-index:50;background:rgba(7,18,13,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:10px;padding:12px 18px}
+.brand{font-weight:800;font-size:19px;color:#fff;text-decoration:none}
+.brand b{color:var(--gold)}
+.nav-links{display:flex;gap:4px;margin-left:auto;overflow-x:auto}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px 10px;white-space:nowrap}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:13px 22px;font-size:16px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:linear-gradient(135deg,#2fd08c,#1ea76c);color:#04120a;box-shadow:0 8px 26px rgba(47,208,140,.28)}
+.btn-gold{background:linear-gradient(135deg,#e8b84a,#c9962f);color:#1a1204}
+.btn-ghost{border-color:rgba(234,245,238,.22);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-line{background:#06c755;color:#fff}
+.hero{padding:64px 0 36px;text-align:center}
+.badge{display:inline-block;border:1px solid var(--line);background:rgba(232,184,74,.08);color:var(--gold);border-radius:99px;padding:7px 18px;font-size:14px;font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(30px,6vw,52px);line-height:1.3;font-weight:800}
+h1 .g{color:var(--green)}h1 .y{color:var(--gold)}
+.lead{color:var(--muted);font-size:clamp(16px,2.6vw,19px);max-width:640px;margin:16px auto 0}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.trust{display:flex;gap:8px 20px;justify-content:center;flex-wrap:wrap;margin-top:22px;color:var(--muted);font-size:14px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0 8px}
+figure.shot{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+figure.shot img{width:100%;display:block;aspect-ratio:9/16;object-fit:cover;object-position:top}
+figure.shot figcaption{padding:10px 12px;font-size:13.5px;color:var(--muted)}
+section.block{padding:38px 0;scroll-margin-top:60px}
+h2{font-size:clamp(22px,4vw,30px);margin-bottom:6px}
+.sub{color:var(--muted);margin-bottom:22px}
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.role{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.role img{width:100%;display:block;aspect-ratio:9/11;object-fit:cover;object-position:top}
+.role .pad{padding:16px}
+.role h3{font-size:18px;margin-bottom:6px}
+.role p{font-size:14.5px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:st}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;position:relative}
+.step::before{counter-increment:st;content:"0" counter(st);display:block;font-size:30px;font-weight:800;color:var(--gold);opacity:.85}
+.step h3{margin:6px 0;font-size:17px}
+.step p{font-size:14.5px;color:var(--muted)}
+table.demo{width:100%;border-collapse:collapse;margin-top:18px;font-size:14.5px;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+table.demo th,table.demo td{padding:12px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06)}
+table.demo th{background:rgba(232,184,74,.08);color:var(--gold);font-size:13px}
+table.demo tr:last-child td{border-bottom:none}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;background:rgba(255,255,255,.07);padding:2px 8px;border-radius:8px;font-size:13.5px;color:#fff}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding:0 18px}
+.faq summary{cursor:pointer;font-weight:700;padding:15px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--gold);font-size:20px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq .a{color:var(--muted);font-size:15px;padding:0 0 16px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.contact-grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 16px;text-align:center;text-decoration:none;color:var(--text)}
+.contact-grid a:hover{border-color:var(--gold)}
+.contact-grid .ic{font-size:30px}
+.contact-grid b{display:block;margin-top:8px;font-size:17px}
+.contact-grid small{color:var(--muted);word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+footer a{color:var(--gold)}
+@media(max-width:760px){.shots,.roles,.steps,.contact-grid{grid-template-columns:1fr}.nav-links a:not(:last-child){display:none}table.demo{font-size:13px}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"TalatSuite","applicationCategory":"BusinessApplication","operatingSystem":"Android, Web","inLanguage":"th","description":"ระบบจัดการตลาด ร้านค้า และออร์เดอร์อาหาร ภาษาไทย","offers":{"@type":"Offer","price":"0","priceCurrency":"THB","description":"ทดลองเดโมฟรี"},"author":{"@type":"Person","name":"David Whitaker","address":{"@type":"PostalAddress","addressLocality":"Bangkok","addressCountry":"TH"}}}
+</script>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="talat.html">🏪 Talat<b>Suite</b></a>
+<div class="nav-links">
+<a href="#roles">ฟีเจอร์</a><a href="#try">วิธีลอง</a><a href="#faq">คำถาม</a><a href="#contact">ติดต่อ</a>
+<a href="https://line.me/ti/p/~dalmighty111" style="color:#06c755;font-weight:700">LINE</a>
+</div>
+</div></nav>
+
+<div class="wrap">
+<header class="hero">
+<div class="badge">ระบบจัดการตลาด 3-in-1 · ภาษาไทย</div>
+<h1>ตลาดของคุณ<br><span class="g">ในมือถือ</span>ของ<span class="y">ลูกค้า</span></h1>
+<p class="lead">ผู้จัดการตลาดดูรายได้และผังล็อค · ร้านค้าใช้ POS กับคิวครัว · ลูกค้าสั่งอาหารจากมือถือ — ในระบบเดียว ทดลองใช้เดโมฟรีได้เลย ไม่ต้องสมัคร</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="demo.html">▶ ทดลองใช้เดโมฟรี</a>
+<a class="btn btn-ghost" href="TalatSuite.apk" download>📱 ติดตั้งแอป Android</a>
+<a class="btn btn-line" href="https://line.me/ti/p/~dalmighty111">💬 คุยทาง LINE</a>
+</div>
+<div class="trust"><span>✓ ทดสอบอัตโนมัติ 414 ข้อ ผ่านทั้งหมด</span><span>✓ เดโมไฟล์เดียว เปิดได้แม้ไม่มีเน็ต</span><span>✓ Android 7.0 ขึ้นไป · แอปแค่ 457 KB</span></div>
+</header>
+
+<div class="shots">
+<figure class="shot"><img src="assets/talatsuite/pitch-home.jpg" alt="หน้าแรกเดโม TalatSuite เลือกบทบาท ลูกค้า ร้านค้า ผู้จัดการตลาด" loading="lazy"><figcaption>เปิดมาก็เริ่มได้เลย — เลือกว่าคุณคือใคร</figcaption></figure>
+<figure class="shot"><img src="assets/talatsuite/pitch-markets.jpg" alt="รายชื่อตลาดกลางวันกลางคืน พร้อมเวลาเปิดปิด" loading="lazy"><figcaption>ดูตลาดที่เปิดวันนี้ พร้อมเวลาและที่ตั้ง</figcaption></figure>
+<figure class="shot"><img src="assets/talatsuite/pitch-shops.jpg" alt="หน้าร้านในตลาด มีประกาศ ที่ตั้ง และคะแนนร้าน" loading="lazy"><figcaption>เข้าไปดูร้าน เมนู และสั่งอาหารได้ทันที</figcaption></figure>
+</div>
+
+<section class="block" id="roles">
+<h2>ระบบเดียว ครบทุกฝ่ายในตลาด</h2>
+<p class="sub">ภาพทั้งหมดคือหน้าจอจริงจากระบบ (ข้อมูลตัวอย่างในเดโม)</p>
+<div class="roles">
+<div class="role"><img src="assets/talatsuite/shot-dash.jpg" alt="แดชบอร์ดผู้จัดการตลาด รายได้ ผังล็อค การอนุมัติ" loading="lazy"><div class="pad"><h3>🧑‍💼 ผู้จัดการตลาด</h3><p>ดูรายได้รายวัน–รายเดือน ผังล็อคว่าที่ไหนว่าง อนุมัติร้านค้าใหม่ และมีบันทึกตรวจสอบ (Audit) ทุกการอนุมัติ</p></div></div>
+<div class="role"><img src="assets/talatsuite/shot-pos.jpg" alt="POS ร้านค้า คิวออร์เดอร์ ใหม่ กำลังปรุง พร้อมเสิร์ฟ" loading="lazy"><div class="pad"><h3>🍜 ร้านค้า + POS</h3><p>รับออร์เดอร์มือเดียว คิวครัวแบบลากเปลี่ยนสถานะ ของหมดระบบปิดขายอัตโนมัติ สรุปยอดขายทุกวัน</p></div></div>
+<div class="role"><img src="assets/talatsuite/shot-order.jpg" alt="ลูกค้าสั่งอาหารจากร้านในตลาด" loading="lazy"><div class="pad"><h3>🛒 ลูกค้า</h3><p>เดินดูตลาดจากมือถือ สั่งอาหารร้านไหนก็ได้ ไม่ต้องสมัครสมาชิก ติดตามสถานะออร์เดอร์ได้ทุกขั้น</p></div></div>
+</div>
+</section>
+
+<section class="block" id="try">
+<h2>ลองใช้ใน 1 นาที</h2>
+<p class="sub">ไม่ต้องสมัคร ไม่ต้องติดตั้ง กดลิงก์แล้วเล่นได้เลย — เล่นพังก็กดปุ่ม ↺ รีเซ็ตข้อมูลตัวอย่างได้ตลอด</p>
+<div class="steps">
+<div class="step"><h3>เปิดเดโม</h3><p>กดปุ่ม <a href="demo.html" style="color:var(--green)">ทดลองใช้เดโม</a> ด้านบน ไฟล์เดียวจบ ภาษาไทยทั้งระบบ (มีปุ่มสลับอังกฤษ)</p></div>
+<div class="step"><h3>เลือกบทบาท</h3><p>เป็นลูกค้าเดินดูตลาดได้ทันที หรือแตะ <b>บัญชีทดลอง</b> หน้าเข้าสู่ระบบเพื่อลองฝั่งแอดมิน–ร้านค้า</p></div>
+<div class="step"><h3>ลองให้ครบวงจร</h3><p>สั่งอาหาร → สลับไปดูคิวที่ฝั่งร้าน → ดูรายได้ที่ฝั่งผู้จัดการ เห็นภาพทั้งตลาดในรอบเดียว</p></div>
+</div>
+<table class="demo">
+<tr><th>บทบาท</th><th>ชื่อผู้ใช้</th><th>รหัสผ่าน</th><th>จะเห็นอะไร</th></tr>
+<tr><td>แอดมิน</td><td><code>admin</code></td><td><code>admin123</code></td><td>ภาพรวมและการอนุมัติทั้งหมด</td></tr>
+<tr><td>ผู้จัดการตลาด</td><td><code>somchai</code></td><td><code>market123</code></td><td>แดชบอร์ดรายได้ ผังล็อค การอนุมัติร้าน</td></tr>
+<tr><td>ร้านค้า</td><td><code>pizzabee</code></td><td><code>vendor123</code></td><td>POS + คิวครัวของร้าน</td></tr>
+<tr><td>ลูกค้า</td><td colspan="2">ไม่ต้องสมัคร</td><td>เดินดูตลาด สั่งอาหาร ติดตามออเดอร์</td></tr>
+</table>
+</section>
+
+<section class="block faq" id="faq">
+<h2>คำถามที่เจอบ่อย</h2>
+<p class="sub">&nbsp;</p>
+<details open><summary>ต้องใช้อินเทอร์เน็ตไหม?</summary><div class="a">ตัวเดโมไฟล์เดียวเปิดได้แม้ไม่มีเน็ต (หลังโหลดครั้งแรก) ส่วนระบบจริงแบบเว็บและแอปต้องใช้เน็ตเหมือนแอปทั่วไป</div></details>
+<details><summary>มือถือรุ่นเก่าใช้ได้ไหม?</summary><div class="a">Android 7.0 ขึ้นไปติดตั้งแอปได้เลย ตัวแอปแค่ 457 KB เบามาก ส่วน iPhone เปิดผ่านเบราว์เซอร์ได้ทันทีไม่ต้องติดตั้ง</div></details>
+<details><summary>ข้อมูลตลาดเป็นของใคร?</summary><div class="a">เป็นของตลาด 100% — โค้ด ดีไซน์ และเอกสารทั้งหมดโอนให้เจ้าของตลาด ไม่มีล็อกอินผูกมัด</div></details>
+<details><summary>ค่าใช้จ่ายเท่าไหร่?</summary><div class="a">ทำใบเสนอราคาตามขนาดตลาดและความต้องการ ไม่มีค่าใช้จ่ายแอบแฝง เริ่มจากคุยกันฟรี 30 นาทีก่อนได้ ไม่ทำด้วยกันก็ได้คำแนะนำกลับไป</div></details>
+<details><summary>เริ่มทดลองที่ตลาดจริงได้อย่างไร?</summary><div class="a">ทัก LINE มาคุยกันก่อน แล้วนัดเซ็ตระบบตลาดนำร่อง (pilot) ให้ลองใช้กับร้านค้าจริง มีระบบนำร่องออนไลน์ให้ดูก่อนตัดสินใจด้วย</div></details>
+<details><summary>มีภาษาอังกฤษด้วยไหม?</summary><div class="a">มีทุกหน้า ปุ่มสลับไทย ⇄ อังกฤษอยู่บนทุกจอ ลูกค้าต่างชาติใช้ได้สบาย</div></details>
+</section>
+
+<section class="block" id="contact">
+<h2>คุยกันก่อนได้ ไม่ผูกมัด</h2>
+<p class="sub">เล่าให้ฟังว่าตลาดของคุณเจอปัญหาอะไร — จะได้คำแนะนำและราคาคร่าว ๆ กลับไป</p>
+<div class="contact-grid">
+<a href="https://line.me/ti/p/~dalmighty111"><div class="ic">💬</div><b>LINE</b><small>dalmighty111</small></a>
+<a href="tel:+66822455384"><div class="ic">📞</div><b>โทร</b><small>082-245-5384</small></a>
+<a href="mailto:david8whitaker@gmail.com"><div class="ic">✉️</div><b>อีเมล</b><small>david8whitaker@gmail.com</small></a>
+</div>
+</section>
+</div>
+
+<footer><div class="wrap">
+TalatSuite · สร้างโดย David Whitaker · กรุงเทพฯ ประเทศไทย<br>
+<a href="index.html">← กลับหน้า portfolio (English)</a> · <a href="demo.html">ทดลองเดโม</a> · ข้อมูลในเดโมเป็นข้อมูลตัวอย่าง
+</div></footer>
+</body>
+</html>
