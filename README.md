@@ -5,7 +5,7 @@ Static single-page portfolio. Flagship: **Thaigether** (consumer app) · second:
 ## Structure
 - `index.html` — everything (inline CSS/JS, single-file tradition)
 - `talat.html` — Thai market-owner pitch page (QRs, demo logins, FAQ)
-- `demo.html` — TalatSuite demo · `TalatSuite-v7.0.apk` — its binary
+- `demo.html` — TalatSuite demo · `TalatSuite-v7.1.apk` — its binary
 - `assets/thaigether/` — brand + real product screenshots
 - `site.webmanifest`, `sitemap.xml`, `robots.txt`, `og-image.jpg`
 
@@ -13,7 +13,7 @@ Static single-page portfolio. Flagship: **Thaigether** (consumer app) · second:
 
 | Piece | Version | File |
 |---|---|---|
-| TalatSuite app + demo | v7.0.0 | `demo.html`, `TalatSuite-v7.0.apk` |
+| TalatSuite app + demo | v7.1.0 | `demo.html`, `TalatSuite-v7.1.apk` |
 | Thaigether app (hot-linked) | v18 | `https://thaigether.vercel.app/downloads/Thaigether-native-v18.apk` |
 | This site | unversioned static | commit SHA is the version |
 
