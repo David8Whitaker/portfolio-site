@@ -9,6 +9,14 @@ Static single-page portfolio. Flagship: **Thaigether** (consumer app) · second:
 - `assets/thaigether/` — brand + real product screenshots
 - `site.webmanifest`, `sitemap.xml`, `robots.txt`, `og-image.jpg`
 
+## Versions (update on every release)
+
+| Piece | Version | File |
+|---|---|---|
+| TalatSuite app + demo | v7.0.0 | `demo.html`, `TalatSuite-v7.0.apk` |
+| Thaigether app (hot-linked) | v18 | `https://thaigether.vercel.app/downloads/Thaigether-native-v18.apk` |
+| This site | unversioned static | commit SHA is the version |
+
 ## Deploy
 Vercel project `davidwhitaker` → https://davidwhitaker.vercel.app (static, no build step).
 Git auto-deploys from `main`. Manual deploy if ever needed:
