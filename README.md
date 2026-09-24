@@ -5,7 +5,7 @@ Static single-page portfolio. Flagship: **Thaigether** (consumer app) · second:
 ## Structure
 - `index.html` — everything (inline CSS/JS, single-file tradition)
 - `talat.html` — Thai market-owner pitch page (QRs, demo logins, FAQ)
-- `demo.html` — TalatSuite demo · `TalatSuite.apk` — its binary
+- `demo.html` — TalatSuite demo · `TalatSuite-v7.0.apk` — its binary
 - `assets/thaigether/` — brand + real product screenshots
 - `site.webmanifest`, `sitemap.xml`, `robots.txt`, `og-image.jpg`
 
