@@ -1,0 +1,19 @@
+name: CI
+
+# Static-integrity check on every push (offline — Vercel deploys after the push,
+# so this asserts the repo itself, not the live site). Needs no secrets.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "20.x"
+      - run: node scripts/check.mjs
