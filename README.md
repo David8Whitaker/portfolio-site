@@ -14,7 +14,7 @@ Static single-page portfolio. Flagship: **Thaigether** (consumer app) · second:
 | Piece | Version | File |
 |---|---|---|
 | TalatSuite app + demo | v7.1.0 | `demo.html`, `TalatSuite-v7.1.apk` |
-| Thaigether app (hot-linked) | v18 | `https://thaigether.vercel.app/downloads/Thaigether-native-v18.apk` |
+| Thaigether app (hot-linked) | v21 | `https://thaigether.vercel.app/downloads/Thaigether-native-v21.apk` |
 | This site | unversioned static | commit SHA is the version |
 
 ## Deploy
