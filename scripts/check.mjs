@@ -1,10 +1,12 @@
 /* Portfolio static-integrity check (zero dependencies — runs in CI on every push).
    Offline by design: Vercel deploys AFTER the push, so CI asserts the repo itself —
    every page exists, every relative asset ref resolves to a committed file, the
-   APK + demo payloads look sane, every page declares a favicon, and no dead
-   github.io (Pages) links linger. Live byte/render proofs run post-deploy from
+   APK + demo payloads look sane, every page declares a favicon, no dead
+   github.io (Pages) links linger, APK size claims match the binary, the demo
+   carries the current version marker, analytics snippets are present, and no
+   orphan assets linger. Live byte/render proofs run post-deploy from
    ~/qa-portfolio/verify.mjs instead. */
-import { existsSync, readFileSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -54,6 +56,31 @@ for (const m of sm.matchAll(/<loc>([^<]+)<\/loc>/g)) {
 }
 ok(smBad === 0, 'sitemap targets exist');
 ok(existsSync(join(ROOT, 'robots.txt')), 'robots.txt exists');
+// APK size claims must match the committed binary (decimal KB)
+const apkBytes = existsSync(apk) ? statSync(apk).size : 0;
+const apkKB = Math.round(apkBytes / 1000);
+let kbBad = 0, kbN = 0;
+for (const p of ['index.html', 'talat.html']) {
+  for (const m of html[p].matchAll(/(\d+)\s*KB/g)) {
+    kbN++;
+    if (Number(m[1]) !== apkKB) { kbBad++; console.log(`  stale KB claim in ${p}: ${m[1]} KB (apk is ${apkKB} KB)`); }
+  }
+}
+ok(kbN > 0 && kbBad === 0, 'APK size claims match binary', `${kbN} claims = ${apkKB} KB`);
+// demo.html must carry the current TalatSuite version marker (regression: stale demo payload)
+ok(html['demo.html'].includes('v7.1'), 'demo.html carries v7.1 marker');
+// analytics present on tracked pages (regression: snippet silently dropped)
+for (const p of ['index.html', 'demo.html']) ok(html[p].includes('G-CQ9NHDR48H'), `GA4 present: ${p}`);
+// no orphan assets: every committed file under assets/ must be referenced (regression: banner.png dead weight)
+const assetFiles = [];
+const walkA = (d) => { for (const e of readdirSync(join(ROOT, d))) { const r = `${d}/${e}`; statSync(join(ROOT, r)).isDirectory() ? walkA(r) : assetFiles.push(r); } };
+walkA('assets');
+const allHtml = Object.values(html).join('\n');
+let orphan = 0;
+for (const a of assetFiles) {
+  if (!allHtml.includes(a)) { orphan++; console.log(`  orphan asset: ${a}`); }
+}
+ok(orphan === 0, 'no orphan assets', `${assetFiles.length} files`);
 
 console.log(`\nSTATIC: ${pass} pass · ${fail} fail`);
 process.exit(fail ? 1 : 0);
