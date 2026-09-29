@@ -1,10 +1,7 @@
 version: 2
+# NOTE: no npm block — this repo has no package.json (static site); an npm
+# block just produces a failing "npm_and_yarn" run every week.
 updates:
-  - package-ecosystem: npm
-    directory: /
-    schedule: { interval: weekly, day: monday }
-    open-pull-requests-limit: 5
-    labels: [dependencies]
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: monthly }
